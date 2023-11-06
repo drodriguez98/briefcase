@@ -1,0 +1,112 @@
+body { 
+    margin: 0; 
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("assets/img/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.presentation-container, .sections-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+#presentation {
+    text-align: center;
+    color: white;
+}
+
+#presentation h1, #presentation h3 { 
+    color: rgb(236, 224, 243); 
+}
+
+#presentation h1 { 
+    font-family: 'Blacklisted', sans-serif; 
+    font-size: 60px;
+}
+
+#presentation h3 { 
+    font-family: 'Snorter', sans-serif; 
+    font-size: 50px; 
+}
+
+.hidden { 
+    display: none; 
+}
+
+.sections-container section {
+    flex: 1;
+    width: 500px;
+    min-width: 200px;
+    margin-top: 165px;
+    margin-bottom: 165px;
+    background-color: rgba(184, 193, 231, 0.7);
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.button-53 {
+    width: 100%;
+    max-width: 460px;
+    background-color: #3DD1E7;
+    border: 0;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    transform: rotate(-2deg);
+    margin-top: 150px;
+}
+
+.button-53:focus { 
+    outline: 0; 
+}
+
+.button-53:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+@media (min-width: 768px) {
+    .button-53 {
+        padding: .75rem 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+@font-face {
+    font-family: 'Blacklisted';
+    src: url('assets/fonts/blacklisted.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Snorter';
+    src: url('assets/fonts/snorter.ttf') format('opentype');
+}
