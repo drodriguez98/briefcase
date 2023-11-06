@@ -3,29 +3,25 @@ body {
     padding: 0;
 }
 
-.container {
+#container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente en el viewport */
+    align-items: center; /* Centra horizontalmente en el viewport */
     min-height: 100vh;
     background-image: url("assets/img/background.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
-}
-
-.presentation-container, .sections-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 30%;
 }
 
 #presentation {
     text-align: center;
     color: white;
+    position: fixed; /* Fija el elemento en la ventana */
+    top: 0; /* Lo ancla en la parte superior */
+    left: 0;
+    right: 0;
 }
 
 #presentation h1, #presentation h3 { 
@@ -46,12 +42,19 @@ body {
     display: none; 
 }
 
+.sections-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente las secciones */
+    align-items: center; /* Centra verticalmente las secciones */
+}
+
 .sections-container section {
     flex: 1;
     width: 500px;
     min-width: 200px;
-    margin-top: 165px;
-    margin-bottom: 165px;
+    margin: 10px;
     background-color: rgba(184, 193, 231, 0.7);
     padding: 20px;
     border: 1px solid rgb(255, 255, 255);
@@ -72,7 +75,7 @@ body {
     user-select: none;
     touch-action: manipulation;
     transform: rotate(-2deg);
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .button-53:focus { 
