@@ -17,18 +17,19 @@ body {
     top: 0; 
     left: 0;
     right: 0;
-    text-align: center;
-    color: rgb(236, 224, 243); 
+    text-align: center; 
 }
 
 #header h1 { 
     font-family: 'Blacklisted', sans-serif; 
     font-size: 60px;
+    color: rgb(211 179 62); 
 }
 
 #header h3 { 
     font-family: 'Snorter', sans-serif; 
     font-size: 50px; 
+    color: rgb(72 13 67); 
 }
 
 .hidden { display: none; }
@@ -48,18 +49,28 @@ body {
     width: 500px;
     min-width: 500px;
     margin: 35px;
-    padding: 15px;
-    background-color: rgba(184, 193, 231, 0.7);
-    border: 1px solid rgb(255, 255, 255);
+    padding: 25px;
+    background-color: #ead4ed91;
+    border: 2px solid rgb(72 13 67);
     text-align: center;
+    border-radius: 2px;
+    color: rgb(72 13 67);
+}
+
+#main h2 {
+    font-size: 24px;
+}
+
+#main p {
+    font-size: 16px;
 }
 
 .button-53 {
     width: 100%;
     max-width: 460px;
-    background-color: #3DD1E7;
+    background-color: #ead4ed91;
     border: 0;
-    color: #000000;
+    color: rgb(72 13 67);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.75rem;
@@ -72,9 +83,7 @@ body {
     margin-top: 50px;
 }
 
-.button-53:focus { 
-    outline: 0; 
-}
+.button-53:focus { outline: 0; }
 
 .button-53:after {
     content: '';
