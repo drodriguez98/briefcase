@@ -1,5 +1,5 @@
-body { 
-    margin: 0; 
+body {
+    margin: 0;
     padding: 0;
 }
 
@@ -14,63 +14,58 @@ body {
 }
 
 #header {
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
-    text-align: center; 
+    text-align: center;
 }
 
-#header h1 { 
-    font-family: 'Blacklisted', sans-serif; 
+#header h1 {
+    font-family: 'Blacklisted', sans-serif;
     font-size: 60px;
-    color: rgb(211 179 62); 
+    color: rgb(211 179 62);
 }
 
-#header h3 { 
-    font-family: 'Snorter', sans-serif; 
-    font-size: 50px; 
-    color: rgb(72 13 67); 
+#header h3 {
+    font-family: 'Snorter', sans-serif;
+    font-size: 50px;
+    color: rgb(72 13 67);
 }
 
 .hidden { display: none; }
 
 nav ul {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 0;
-    
 }
 
 nav ul li {
-
     margin: 35px;
-    list-style: none;
-
+    list-style: none; 
 }
 
 nav ul li a {
-
     text-decoration: none;
-    color: rgb(211 179 62); 
-
+    color: rgb(211 179 62);
+    font-size: 19px;
 }
 
 #main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     margin-right: 3.5%;
     margin-left: 3.5%;
+    align-items: stretch; /* Alinea verticalmente todas las secciones en la fila */
 }
 
 #main section {
-    flex-grow: 1;
-    width: 500px;
+    word-wrap: break-word; /* Rompe palabras largas */
+    width: 650px;
     min-width: 500px;
-    max-width: 600px;
     margin: 35px;
     padding: 25px;
     background-color: #ead4ed91;
@@ -78,7 +73,12 @@ nav ul li a {
     text-align: center;
     border-radius: 2px;
     color: rgb(72 13 67);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    transform: scale(1); /* Escala normal */
 }
+
+#main section:hover { transform: scale(1.05); } /* Escala cuando se pasa el ratón por encima */ 
 
 #main h2 { font-size: 24px; }
 
@@ -93,7 +93,7 @@ nav ul li a {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.75rem;
-    padding: .75rem 1.65rem;
+    padding: 0.75rem 1.65rem;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
@@ -111,7 +111,7 @@ nav ul li a {
     bottom: 4px;
     left: 4px;
     width: calc(100% - 1px);
-    height: calc(100% - 1px);
+height: calc(100% - 1px);
 }
 
 .button-53:hover:after {
@@ -120,10 +120,11 @@ nav ul li a {
 }
 
 @media (min-width: 768px) {
-    .button-53 {
-        padding: .75rem 3rem;
-        font-size: 1.25rem;
-    }
+
+.button-53 {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+}
 }
 
 @font-face {
