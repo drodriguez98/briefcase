@@ -1,0 +1,8 @@
+.inline-block-example {
+    display: inline-block;
+    width: 100px; /* Puedes definir una anchura */
+    height: 50px; /* Puedes definir una altura */
+    margin: 10px; /* Puedes aplicar márgenes */
+    border: 1px solid #000; /* Solo para visualizar el contorno del elemento */
+  }
+  
