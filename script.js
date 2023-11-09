@@ -17,19 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         link.addEventListener('click', function(e) {
 
-            e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-            // Obtén el objetivo del enlace (el elemento al que te estás desplazando)
+            e.preventDefault(); 
 
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
 
-            // Desplázate suavemente al elemento objetivo usando el método scrollIntoView
-
             targetElement.scrollIntoView({
 
                 behavior: 'smooth',
-                block: 'start' // O 'end' o 'center' según tus preferencias
+                block: 'start'
 
             });
 
