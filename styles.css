@@ -4,15 +4,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(10, 10, 10, 0.25);
-    
+    background-color: rgba(10, 10, 10, 0.25);  
     /*
     background-color: black;  
     background-image: url("assets/img/background-3.jpg");
     background-attachment: fixed; 
     background-position: center; 
     background-size: cover;
-    overflow: hidden; /* Evitar barras de desplazamiento  
     */
 }
 
@@ -26,7 +24,7 @@ body {
     transition: opacity 1.5s ease-in-out;
     padding: 0;
     user-select: none;  
-    background-color: rgba(0, 0, 0, 0.35)
+    background-color: rgba(0, 0, 0, 0.45);
 }
 
 video {
@@ -70,12 +68,11 @@ video {
     border-radius: 50%;
     animation: bounce 3s ease-in-out infinite;
     box-shadow: 0 0 4px 2px white; 
-  }
+}
 
 #header-text:hover {
     transition: color 0.5s; 
     animation: tilt 0.3s ease infinite alternate; 
-    /* animation: tilt 0.3s ease infinite alternate; */
 }
 
 /* Clase para ocultar elementos */
@@ -110,7 +107,6 @@ video {
     text-decoration: none; 
     color: white;
     padding: 15px;
-    /* transition: color 0.2s; */
 }
 
 #navigation ul li a:hover { animation: rotate 0.4s ease-in-out forwards; }
