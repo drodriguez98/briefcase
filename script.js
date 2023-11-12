@@ -1,87 +1,31 @@
-let currentSection = 1;
-const totalSections = 4;
-
-function showNextSection() {
-
-    const section = document.getElementById(`section${currentSection}`);
-
-    if (section) {
-
-        section.style.display = 'none';
-        currentSection = (currentSection % totalSections) + 1;
-        const newSection = document.getElementById(`section${currentSection}`);
-
-        if (newSection) { newSection.style.display = 'block'; }
-
-        if (currentSection === 1) {
-
-            document.querySelector('[onclick="showPreviewSection()"]').style.display = 'none';
-        
-        } else { document.querySelector('[onclick="showPreviewSection()"]').style.display = 'inline-block'; }
-
-        showSectionTitles();
-
-    }
-
-}
-
-function showPreviewSection() {
-
-    if (currentSection > 1) {
-
-        const currentSectionElement = document.getElementById(`section${currentSection}`);
-        currentSectionElement.style.display = 'none';
-        currentSection--;
-
-        const previousSection = document.getElementById(`section${currentSection}`);
-
-        if (previousSection) { previousSection.style.display = 'block'; }
-
-        if (currentSection === totalSections) { document.querySelector('[onclick="showNextSection()"]').style.display = 'inline-block'; }
-
-        showSectionTitles();
-
-    }
-
-}
+// Script para resaltar el enlace activo en la barra de navegación
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const firstSection = document.getElementById('section1');
+    const navLinks = document.querySelectorAll("#navigation a");
 
-    if (firstSection) {
+    navLinks.forEach(link => {
 
-        firstSection.style.display = 'block';
-        document.querySelector('[onclick="showPreviewSection()"]').style.display = 'none';
+        link.addEventListener("click", function (event) {
 
-    }
+        event.preventDefault();
 
-    showSectionTitles();
+        // Oculta todas las secciones
 
+        document.querySelectorAll("#main section").forEach(section => { section.style.display = "none"; });
+
+        // Muestra la sección correspondiente
+
+        const targetSectionId = link.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetSectionId);
+
+        if (targetSection) { targetSection.style.display = "block"; }
+
+        // Resalta el enlace activo
+
+        navLinks.forEach(navLink => { navLink.classList.remove("active"); });
+        link.classList.add("active");
+
+        });
+    });
 });
-
-function showSectionTitles() {
-
-    const previewButton = document.querySelector('[onclick="showPreviewSection()"]');
-    const nextButton = document.querySelector('[onclick="showNextSection()"]');
-    
-    previewButton.innerText = getPreviousSectionTitle();
-    nextButton.innerText = getNextSectionTitle();
-
-}
-
-function getPreviousSectionTitle() {
-
-    const previousSection = currentSection === 1 ? totalSections : currentSection - 1;
-    const previousSectionElement = document.getElementById(`section${previousSection}`);
-    return previousSectionElement ? previousSectionElement.querySelector('h2').innerHTML : '';
-
-}
-
-function getNextSectionTitle() {
-
-    const nextSection = currentSection === totalSections ? 1 : currentSection + 1;
-    const nextSectionElement = document.getElementById(`section${nextSection}`);
-    return nextSectionElement ? nextSectionElement.querySelector('h2').innerHTML : '';
-
-}

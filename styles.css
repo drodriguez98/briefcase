@@ -76,6 +76,47 @@ video {
 
 .hidden { display: none; }
 
+/* Estilos para el menú de navegación */
+
+#navigation {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+#navigation li {
+    margin: 0 15px;
+}
+
+#navigation .nav-link {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold; 
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#navigation li:hover { animation:tilt 0.3s ease infinite alternate; }
+
+#navigation a:hover,
+#navigation a.active {
+  border-bottom: 2px solid white;
+}
+
+
 /* Estilos para la sección principal de la página */
 
 #main {
@@ -136,29 +177,6 @@ video {
     width: 50px;
     padding: 15px;
 }
-
-#sections-nav-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    text-align: center; 
-    margin-bottom: 30px;
-}
-
-#sections-nav-container button {
-    width: 150px;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold; 
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-#sections-nav-container button:hover { animation: tilt 0.3s ease infinite alternate; }
-
 /* Keyframes */
 
 @keyframes tilt {
