@@ -4,7 +4,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(70, 1, 70, 0.25);
+    background-color: rgba(10, 10, 10, 0.25);
     
     /*
     background-color: black;  
@@ -22,14 +22,12 @@ body {
     display: flex; 
     flex-direction: column;
     min-height: 100vh; 
-    width: 60%;
-    opacity: 0;
+    width: 70%;
     transition: opacity 1.5s ease-in-out;
-    margin: 0 auto;
+    padding: 0;
     user-select: none;  
+    background-color: rgba(0, 0, 0, 0.35)
 }
-
-#container.show { opacity: 1; }
 
 video {
     position: fixed;
@@ -58,12 +56,12 @@ video {
     font-size: 75px;
     transition: transform 0.2s; 
     border-radius: 10px;
-    color: rgb(235, 212, 235);
+    color: white;
 }
 
 #header .my-photo {
     background-image: url("assets/img/me.png");
-    background-color: white;
+    background-color: rgb(243, 224, 243);
     background-attachment: fixed; 
     background-position: center; 
     background-size: cover;
@@ -71,12 +69,12 @@ video {
     height: 175px;
     border-radius: 50%;
     animation: bounce 3s ease-in-out infinite;
-    box-shadow: 0 0 4px 2px rgba(235, 212, 235); 
+    box-shadow: 0 0 4px 2px white; 
   }
 
 #header-text:hover {
     transition: color 0.5s; 
-    animation: tilt 0.3s ease alternate; 
+    animation: tilt 0.3s ease infinite alternate; 
     /* animation: tilt 0.3s ease infinite alternate; */
 }
 
@@ -110,20 +108,18 @@ video {
     font-size: 22px; 
     font-weight: bold; 
     text-decoration: none; 
-    color: rgb(235, 212, 235);
+    color: white;
     padding: 15px;
     /* transition: color 0.2s; */
 }
 
-#navigation ul li a:hover {
-    animation: rotate 0.4s ease-in-out forwards; 
-    /* color: rgba(245, 242, 72, 0.9); */
-}
+#navigation ul li a:hover { animation: rotate 0.4s ease-in-out forwards; }
 
 /* Estilos para la sección principal de la página */
 
 #main {
     display: flex; 
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -132,7 +128,7 @@ video {
 /* Estilos para las secciones individuales */
 
 #main section {
-    width: 100%;
+    width: 65%;
     min-height: 250px;
     transform: scale(1);
     transition: transform 0.3s ease-in-out; 
@@ -142,13 +138,13 @@ video {
     animation-name: show;
     animation-range: entry 25% cover 23%; 
     animation-fill-mode: both; 
-    background-color: rgb(235, 212, 235,0.95); 
+    background-color: rgba(10, 10, 10, 0.9); 
     font-family: 'Raleway', sans-serif;
-    color: black;
-    box-shadow: 0 0 5px 1px rgb(235, 212, 235);
+    color: white;
+    box-shadow: 0 0 5px 1px white;
     border-radius: 10px; 
     cursor: pointer; 
-    margin: 25px; 
+    margin: 20px auto;
 }
 
 #main section:hover { transform: scale(1.05); }
@@ -184,11 +180,6 @@ video {
 }
 
 /* Keyframes */
-
-@keyframes show {
-    from { opacity: 1; scale: 25%; }
-    to { opacity: 1; scale: 100%; }
-}
 
 @keyframes tilt {
     0%, 100% { transform: rotate(0deg); }
