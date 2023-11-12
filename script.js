@@ -1,19 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    const button = document.querySelector(".button-53");
-    const sections = document.querySelectorAll("section.hidden");
-    const nav = document.querySelector("nav.hidden");
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    const container = document.getElementById("container");
+    const navLinks = document.querySelectorAll('a[href^="#"].nav-link');
 
-    button.addEventListener("click", function() {
+    container.classList.add("show");
 
-        sections.forEach(section => { section.classList.remove("hidden"); });
-        button.style.display = "none";
-        nav.classList.remove("hidden");
-
-    });
-
-    internalLinks.forEach(link => {
+    navLinks.forEach(link => {
 
         link.addEventListener('click', function(e) {
 

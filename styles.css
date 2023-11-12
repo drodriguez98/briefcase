@@ -1,6 +1,14 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(0, 0, 0);  
+    /*
+    background-image: url("assets/img/background-3.jpg");
+    background-attachment: fixed; 
+    background-position: center; 
+    background-size: cover;
+    overflow: hidden; /* Evitar barras de desplazamiento  
+    */
 }
 
 /* Contenedor principal de la página */
@@ -8,93 +16,51 @@ body {
 #container {
     display: flex; 
     flex-direction: column;
-    background-image: url("assets/img/background-3.jpg");
-    background-attachment: fixed; 
-    background-position: center; 
-    background-size: cover; 
     min-height: 100vh; 
-    width: 100%;
+    width: 85%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    margin: 0 auto;
 }
+
+#container.show { opacity: 1; }
 
 /* Estilos para el encabezado de la página */
 
 #header {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
+    padding: 35px;
 }
 
-#header-text-yellow, #header-text-light {
+#header-text {
     font-family: 'Blacklisted', sans-serif; 
     font-size: 60px;
-    user-select: none; 
     transition: transform 0.2s; 
-    transition: box-shadow 0.3s ease;
-    padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
+    user-select: none;  
+    color: rgba(204, 203, 203);
 }
 
-#header-text-yellow {
-    color: rgb(248, 219, 114); 
-    margin-right: 35px; 
+#header .my-photo {
+    background-image: url("assets/img/me.jpeg");
+    background-attachment: fixed; 
+    background-position: center; 
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: bounce 3s ease-in-out infinite;
+    box-shadow: 0 0 10px white;
+  }
 
-}
-
-#header-text-light { color: #dbd5e4be; }
-
-#header-text-yellow:hover {
+#header-text:hover {
     transition: color 0.5s; 
-    animation: tilt 0.3s ease infinite alternate; 
-    box-shadow: 0 0 10px 10px rgba(248, 219, 114, 0.75); 
-}
-
-#header-text-light:hover {
-    transition: color 0.5s; 
-    animation: tilt 0.3s ease infinite alternate; 
-    box-shadow: 0 0 10px 10px #dbd5e4be; 
-}
-
-/* Estilos para el contenedor del botón y el botón */
-
-#button-container {
-    text-align: center;
-    justify-content: center;
-}
-
-.button-53 {
-    width: 100%; 
-    max-width: 460px; 
-    margin-top: 150px; 
-    color: #3d3c3f;
-    padding: 0.75rem 1.65rem; 
-    background-color: rgb(248, 219, 114); 
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.75rem; 
-    border: 0;
-    cursor: pointer; 
-    text-decoration: none; 
-    user-select: none; 
-    touch-action: manipulation;
-    transform: rotate(-2deg); /
-}
-
-.button-53:focus { outline: 0; }
-
-.button-53:after {
-    position: absolute; 
-    width: calc(100% - 1px); 
-    height: calc(100% - 1px); 
-    border: 1px solid #000000;
-    bottom: 4px; 
-    left: 4px; 
-    content: ''; 
-}
-
-.button-53:hover:after {
-    bottom: 2px; 
-    left: 2px;
+    animation: tilt 0.3s ease alternate; 
+    /* animation: tilt 0.3s ease infinite alternate; */
 }
 
 /* Clase para ocultar elementos */
@@ -118,23 +84,20 @@ body {
 }
 
 #navigation ul li a {
+    display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-size: 19px; 
     font-weight: bold; 
-    transition: transform 0.2s;
-    transition: box-shadow 0.3s ease;
     text-decoration: none; 
-    color: #dbd5e4; 
-    display: inline-block;
-    padding: 10px;
+    color: rgba(204, 203, 203); 
+    padding: 15px;
     user-select: none; 
-    border-radius: 5px; 
+    /* transition: color 0.2s; */
 }
 
 #navigation ul li a:hover {
-    color: rgb(248, 219, 114); 
-    transition: color 0.5s; 
-    animation: tilt 0.3s ease infinite alternate;
+    animation: rotate 0.4s ease-in-out forwards; 
+    /* color: rgba(245, 242, 72, 0.9); */
 }
 
 /* Estilos para la sección principal de la página */
@@ -149,35 +112,35 @@ body {
 
 #main section {
     width: 1000px;
-    margin: 25px; 
-    transform: scale(1); 
     min-height: 250px;
+    transform: scale(1);
     transition: transform 0.3s ease-in-out; 
-    border-radius: 10px; 
-    cursor: pointer; 
-    background-color: rgba(0, 0, 0, 0.9); 
-    color: #dbd5e4; 
     view-timeline-name: --section;
     view-timeline-axis: block; 
     animation-timeline: --section; 
     animation-name: show;
     animation-range: entry 25% cover 23%; 
     animation-fill-mode: both; 
-    box-shadow: 0 0 5px 2px rgb(248, 219, 114, 0.85);
+    background-color: rgba(0, 0, 0, 0.85); 
+    color: rgba(204, 203, 203);
+    box-shadow: 0 0 7px 1px rgba(204, 203, 203, 0.658);
+    border-radius: 10px; 
+    cursor: pointer; 
+    margin: 25px; 
 }
+
+#main section:hover { transform: scale(1.05); }
 
 #main section h2 {
     text-align: center; 
     font-size: 24px; 
     margin: 40px; 
-    color: rgb(248, 219, 114); 
 }
 
 #main section p {
     font-size: 17.5px; 
     line-height: 1.75; 
     margin: 50px;
-    color: #dbd5e4;
 }
 
 #main section .technologies-img {
@@ -201,49 +164,31 @@ body {
 #main section .contact-links img {
     height: 50px;
     width: 50px;
-    padding: 15px;
+    margin-right: 35px;
 }
 
 /* Keyframes */
 
 @keyframes show {
-
-    from {
-        opacity: 0; 
-        scale: 25%; 
-    }
-
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
-
+    from { opacity: 1; scale: 25%; }
+    to { opacity: 1; scale: 100%; }
 }
 
 @keyframes tilt {
-
     0%, 100% { transform: rotate(0deg); }
-
     25% { transform: rotate(5deg);  }
-    
     50% { transform: rotate(-5deg); }
-
     75% { transform: rotate(3deg); }
-
 }
 
-#main section:hover { transform: scale(1.05); }
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
-
-/* Estilos responsivos para pantallas más grandes */
-
-@media (min-width: 768px) {
-
-    .button-53 {
-        padding: 0.75rem 3rem; 
-        font-size: 1.25rem; 
-    }
-
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Fuentes personalizadas */
@@ -253,7 +198,6 @@ body {
     src: url('assets/fonts/blacklisted.ttf') format('opentype');
 }
 
-/* Incorpora la fuente Snorter */
 @font-face {
     font-family: 'Snorter';
     src: url('assets/fonts/snorter.ttf') format('opentype');
