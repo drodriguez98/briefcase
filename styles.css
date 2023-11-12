@@ -66,7 +66,7 @@ video {
     width: 175px;
     height: 175px;
     border-radius: 50%;
-    animation: bounce 3s ease-in-out infinite;
+    animation: bounce 2s ease-in-out infinite;
     box-shadow: 0 0 4px 2px white; 
 }
 
@@ -191,7 +191,7 @@ video {
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Fuentes personalizadas */
