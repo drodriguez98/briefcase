@@ -1,94 +1,87 @@
 let currentSection = 1;
 const totalSections = 4;
 
-function mostrarSiguienteSeccion() {
+function showNextSection() {
+
     const section = document.getElementById(`section${currentSection}`);
+
     if (section) {
+
         section.style.display = 'none';
         currentSection = (currentSection % totalSections) + 1;
         const newSection = document.getElementById(`section${currentSection}`);
-        if (newSection) {
-            newSection.style.display = 'block';
-        }
+
+        if (newSection) { newSection.style.display = 'block'; }
 
         if (currentSection === 1) {
-            document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'none';
-        } else {
-            document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'inline-block';
-        }
 
-        mostrarTitulosSecciones();
+            document.querySelector('[onclick="showPreviewSection()"]').style.display = 'none';
+        
+        } else { document.querySelector('[onclick="showPreviewSection()"]').style.display = 'inline-block'; }
+
+        showSectionTitles();
+
     }
+
 }
 
-function retrocederSeccion() {
+function showPreviewSection() {
+
     if (currentSection > 1) {
+
         const currentSectionElement = document.getElementById(`section${currentSection}`);
         currentSectionElement.style.display = 'none';
         currentSection--;
 
         const previousSection = document.getElementById(`section${currentSection}`);
-        if (previousSection) {
-            previousSection.style.display = 'block';
-        }
 
-        if (currentSection === totalSections) {
-            document.querySelector('[onclick="mostrarSiguienteSeccion()"]').style.display = 'inline-block';
-        }
+        if (previousSection) { previousSection.style.display = 'block'; }
 
-        mostrarTitulosSecciones();
+        if (currentSection === totalSections) { document.querySelector('[onclick="showNextSection()"]').style.display = 'inline-block'; }
+
+        showSectionTitles();
+
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const firstSection = document.getElementById('section1');
+
     if (firstSection) {
+
         firstSection.style.display = 'block';
-        document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'none';
+        document.querySelector('[onclick="showPreviewSection()"]').style.display = 'none';
+
     }
 
-    mostrarTitulosSecciones();
+    showSectionTitles();
+
 });
 
-function mostrarTitulosSecciones() {
-    const previewButton = document.querySelector('[onclick="retrocederSeccion()"]');
-    const nextButton = document.querySelector('[onclick="mostrarSiguienteSeccion()"]');
+function showSectionTitles() {
+
+    const previewButton = document.querySelector('[onclick="showPreviewSection()"]');
+    const nextButton = document.querySelector('[onclick="showNextSection()"]');
     
-    previewButton.innerText = getTituloSeccionAnterior();
-    nextButton.innerText = getTituloSeccionSiguiente();
+    previewButton.innerText = getPreviousSectionTitle();
+    nextButton.innerText = getNextSectionTitle();
+
 }
 
-function getTituloSeccionAnterior() {
+function getPreviousSectionTitle() {
+
     const anteriorSection = currentSection === 1 ? totalSections : currentSection - 1;
     const anteriorSectionElement = document.getElementById(`section${anteriorSection}`);
     return anteriorSectionElement ? anteriorSectionElement.querySelector('h2').innerHTML : '';
+
 }
 
-function getTituloSeccionSiguiente() {
+function getNextSectionTitle() {
+
     const siguienteSection = currentSection === totalSections ? 1 : currentSection + 1;
     const siguienteSectionElement = document.getElementById(`section${siguienteSection}`);
     return siguienteSectionElement ? siguienteSectionElement.querySelector('h2').innerHTML : '';
+
 }
-/*
-// Script para desplazamiento suave al hacer clic en enlaces de navegación
-document.addEventListener("DOMContentLoaded", function() {
-    const container = document.getElementById("container");
-    const navLinks = document.querySelectorAll('a[href^="#"].nav-link');
-
-    container.classList.add("show");
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    });
-});
-
-*/

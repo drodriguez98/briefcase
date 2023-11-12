@@ -1,3 +1,5 @@
+<!-- Añadir nav de nuevo para navegar desde ahi y marcar la seccion actual de alguna forma (subrayar por ej) -->
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -122,9 +124,9 @@
 
                 <div id="sections-nav-container">
 
-                    <button onclick="retrocederSeccion()" style="display:none">Preview</button>
-                    <button onclick="mostrarSiguienteSeccion()">Next</button>
-
+                    <button onclick="showPreviewSection()" style="display:none"><span class="arrow-prev"></span> </button>
+                    <button onclick="showNextSection()"><span class="arrow-next"></span></button>
+                    
                 </div>
 
             </div>
