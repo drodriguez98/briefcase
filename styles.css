@@ -6,11 +6,11 @@ body {
     justify-content: center;
     background-color: rgba(10, 10, 10, 0.25);  
     /*
-    background-color: black;  
-    background-image: url("assets/img/background-3.jpg");
-    background-attachment: fixed; 
-    background-position: center; 
-    background-size: cover;
+        background-color: black;  
+        background-image: url("assets/img/background-3.jpg");
+        background-attachment: fixed; 
+        background-position: center; 
+        background-size: cover;
     */
 }
 
@@ -70,46 +70,11 @@ video {
     box-shadow: 0 0 4px 2px white; 
 }
 
-#header-text:hover {
-    transition: color 0.5s; 
-    animation: tilt 0.3s ease infinite alternate; 
-}
+#header-text:hover { animation: tilt 0.3s ease infinite alternate; }
 
 /* Clase para ocultar elementos */
 
 .hidden { display: none; }
-
-
-/* Estilos para la barra de navegación */
-
-#navigation { width: 100%; }
-
-#navigation ul {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    text-align: center; 
-    margin-top: 1px;
-}
-
-#navigation ul li {
-    list-style: none; 
-    transform: scale(1); 
-    margin-right: 35px; 
-    margin-bottom: 25px;
-}
-
-#navigation ul li a {
-    display: inline-block;
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px; 
-    font-weight: bold; 
-    text-decoration: none; 
-    color: white;
-    padding: 15px;
-}
-
-#navigation ul li a:hover { animation: rotate 0.4s ease-in-out forwards; }
 
 /* Estilos para la sección principal de la página */
 
@@ -128,19 +93,14 @@ video {
     min-height: 250px;
     transform: scale(1);
     transition: transform 0.3s ease-in-out; 
-    view-timeline-name: --section;
-    view-timeline-axis: block; 
-    animation-timeline: --section; 
-    animation-name: show;
-    animation-range: entry 25% cover 23%; 
-    animation-fill-mode: both; 
     background-color: rgba(10, 10, 10, 0.9); 
     font-family: 'Raleway', sans-serif;
     color: white;
     box-shadow: 0 0 5px 1px white;
     border-radius: 10px; 
     cursor: pointer; 
-    margin: 20px auto;
+    margin: 50px auto;
+    display: none;
 }
 
 #main section:hover { transform: scale(1.05); }
@@ -151,9 +111,11 @@ video {
     margin: 40px; 
 }
 
+#main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
+
 #main section p {
-    font-size: 18px; 
-    line-height: 1.75; 
+    font-size: 16px; 
+    line-height: 2; 
     margin: 50px;
 }
 
@@ -174,6 +136,28 @@ video {
     width: 50px;
     padding: 15px;
 }
+
+#sections-nav-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+#sections-nav-container button {
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold; 
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#sections-nav-container button:hover { animation: tilt 0.3s ease infinite alternate; }
 
 /* Keyframes */
 

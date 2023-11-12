@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+
+    <title>Briefcase</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(10, 10, 10, 0.25);  
+            /*
+                background-color: black;  
+                background-image: url("assets/img/background-3.jpg");
+                background-attachment: fixed; 
+                background-position: center; 
+                background-size: cover;
+            */
+        }
+
+        /* Contenedor principal de la página */
+
+        #container {
+            display: flex; 
+            flex-direction: column;
+            min-height: 100vh; 
+            width: 70%;
+            transition: opacity 1.5s ease-in-out;
+            padding: 0;
+            user-select: none;  
+            background-color: rgba(0, 0, 0, 0.45);
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Estilos para el encabezado de la página */
+
+        #header {
+            display: flex; 
+            flex-wrap: wrap; 
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #header-text {
+            font-family: 'Blacklisted', sans-serif; 
+            font-size: 75px;
+            transition: transform 0.2s; 
+            border-radius: 10px;
+            color: white;
+        }
+
+        #header .my-photo {
+            background-image: url("assets/img/me.png");
+            background-color: rgb(243, 224, 243);
+            background-attachment: fixed; 
+            background-position: center; 
+            background-size: cover;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            animation: bounce 2s ease-in-out infinite;
+            box-shadow: 0 0 4px 2px white; 
+        }
+
+        #header-text:hover { animation: tilt 0.3s ease infinite alternate; }
+
+        /* Clase para ocultar elementos */
+
+        .hidden { display: none; }
+
+        /* Estilos para la sección principal de la página */
+
+        #main {
+            display: flex; 
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Estilos para las secciones individuales */
+
+        #main section {
+            width: 65%;
+            min-height: 250px;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out; 
+            background-color: rgba(10, 10, 10, 0.9); 
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            box-shadow: 0 0 5px 1px white;
+            border-radius: 10px; 
+            cursor: pointer; 
+            margin: 50px auto;
+            display: none;
+        }
+
+        #main section:hover { transform: scale(1.05); }
+
+        #main section h2 {
+            text-align: center; 
+            font-size: 22px; 
+            margin: 40px; 
+        }
+
+        #main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
+
+        #main section p {
+            font-size: 16px; 
+            line-height: 2; 
+            margin: 50px;
+        }
+
+        #main section .technologies-img-container, #main section .contact-links-container {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+
+        #main section .technologies-img-container img {
+            width: 60px;
+            height: 60px;
+            padding: 15px;
+        }
+
+        #main section .contact-links-container img {
+            height: 50px;
+            width: 50px;
+            padding: 15px;
+        }
+
+        #sections-nav-container {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center;
+            text-align: center; 
+            margin-bottom: 30px;
+        }
+
+        #sections-nav-container button {
+            width: 150px;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold; 
+            color: white;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        #sections-nav-container button:hover { animation: tilt 0.3s ease infinite alternate; }
+
+        /* Keyframes */
+
+        @keyframes tilt {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg);  }
+            50% { transform: rotate(-5deg); }
+            75% { transform: rotate(3deg); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Fuentes personalizadas */
+
+        @font-face {
+            font-family: 'Blacklisted';
+            src: url('assets/fonts/blacklisted.ttf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Snorter';
+            src: url('assets/fonts/snorter.ttf') format('opentype');
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Contenedor principal de la página -->
+    <div id="container">
+        <video autoplay muted loop>
+            <source src="assets/img/background-1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Encabezado de la página -->
+        <div id="header">
+            <h1 id="header-text">DIEGO RODRIGUEZ</h1>
+            <div class="my-photo"></div>
+        </div>
+
+        <!-- Barra de navegación -->
+        <div id="navigation">
+            <nav>
+                <ul>
+                    <li><a href="#section1" class="nav-link">Summary</a></li>
+                    <li><a href="#section2" class="nav-link">Projects</a></li>
+                    <li><a href="#section3" class="nav-link">Technologies</a></li>
+                    <li><a href="#section4" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Sección principal de la página -->
+        <div id="main">
+            <!-- Resumen -->
+            <section class="hoverable" id="section1">
+                <h2>Summary</h2>
+                <p>Descripción del resumen...</p>
+            </section>
+
+            <!-- Proyectos -->
+            <section class="hoverable" id="section2">
+                <h2>Projects</h2>
+                <p>Descripción de los proyectos...</p>
+            </section>
+
+            <!-- Tecnologías -->
+            <section class="hoverable" id="section3">
+                <h2>Technologies</h2>
+                <div class="technologies-img-container">
+                    <img src="assets/img/sql.png" alt="sql" />
+                    <img src="assets/img/html-5.png" alt="html-5" />
+                    <img src="assets/img/css.png" alt="css" />
+                    <img src="assets/img/js.png" alt="js" />
+                    <img src="assets/img/php.png" alt="php" />
+                    <img src="assets/img/python.png" alt="python" />
+                    <img src="assets/img/java.png" alt="java" />
+                    <img src="assets/img/spring-boot.png" alt="spring-boot" />
+                    <img src="assets/img/angular.png" alt="angular" />
+                </div>
+            </section>
+
+            <!-- Contacto -->
+            <section class="hoverable" id="section4">
+                <h2>Contact</h2>
+                <div class="contact-links-container">
+                    <a href="https://github.com/drodriguez98" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github" /></a>
+                    <a href="https://es.linkedin.com/in/drodriguez98" target="_blank"><img src="assets/img/linkedin.png" class="contact-link-img" alt="linkedin" /></a>
+                    <a href="#" target="_blank"><img src="assets/img/gmail.png" class="contact-link-img" alt="gmail" /></a>
+                </div>
+            </section>
+
+            <!-- Botones para retroceder y avanzar -->
+            <button onclick="retrocederSeccion()" style="display:none">Retroceder</button>
+            <button onclick="mostrarSiguienteSeccion()">Mostrar Siguiente Sección</button>
+            <div id="sectionTitles"></div>
+        </div>
+
+    </div>
+
+    <footer></footer>
+
+    <script>
+        // Script para mostrar/ocultar secciones y botones de retroceso/avance
+        let currentSection = 1;
+        const totalSections = 4; // Cambiar el número total de secciones según tus necesidades
+
+        function mostrarSiguienteSeccion() {
+            const section = document.getElementById(`section${currentSection}`);
+            if (section) {
+                // Ocultar la sección actual
+                section.style.display = 'none';
+
+                // Mostrar la nueva sección o volver a la primera si estamos en la última
+                currentSection = (currentSection % totalSections) + 1;
+                const newSection = document.getElementById(`section${currentSection}`);
+                if (newSection) {
+                    newSection.style.display = 'block';
+                }
+
+                // Ocultar el botón de retroceso si estamos de vuelta en la primera sección
+                if (currentSection === 1) {
+                    document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'none';
+                } else {
+                    document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'inline-block';
+                }
+
+                // Mostrar títulos de secciones
+                mostrarTitulosSecciones();
+            }
+        }
+
+        function retrocederSeccion() {
+            if (currentSection > 1) {
+                // Ocultar la sección actual
+                const currentSectionElement = document.getElementById(`section${currentSection}`);
+                currentSectionElement.style.display = 'none';
+
+                // Retroceder a la sección anterior
+                currentSection--;
+
+                // Mostrar la sección anterior
+                const previousSection = document.getElementById(`section${currentSection}`);
+                if (previousSection) {
+                    previousSection.style.display = 'block';
+                }
+
+                // Mostrar el botón de avanzar si estamos en la última sección
+                if (currentSection === totalSections) {
+                    document.querySelector('[onclick="mostrarSiguienteSeccion()"]').style.display = 'inline-block';
+                }
+
+                // Ocultar el botón de retroceso si estamos de vuelta en la primera sección
+                if (currentSection === 1) {
+                    document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'none';
+                }
+
+                // Mostrar títulos de secciones
+                mostrarTitulosSecciones();
+            }
+        }
+
+        // Mostrar la primera sección cuando la página se carga
+        document.addEventListener("DOMContentLoaded", function () {
+            const firstSection = document.getElementById('section1');
+            if (firstSection) {
+                firstSection.style.display = 'block';
+                document.querySelector('[onclick="retrocederSeccion()"]').style.display = 'none';
+            }
+
+            // Mostrar títulos de secciones
+            mostrarTitulosSecciones();
+        });
+
+        // Script para desplazamiento suave al hacer clic en enlaces de navegación
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("container");
+            const navLinks = document.querySelectorAll('a[href^="#"].nav-link');
+
+            container.classList.add("show");
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+
+        // Función para mostrar los títulos de las secciones en los botones
+        function mostrarTitulosSecciones() {
+            const sectionTitlesContainer = document.getElementById('sectionTitles');
+            if (sectionTitlesContainer) {
+                sectionTitlesContainer.innerHTML = '';
+                const sectionTitles = document.createElement('div');
+                sectionTitles.innerHTML = `<p>${getTituloSeccionAnterior()}</p><p>${getTituloSeccionSiguiente()}</p>`;
+                sectionTitlesContainer.appendChild(sectionTitles);
+            }
+        }
+
+        // Función para obtener el título de la sección anterior
+        function getTituloSeccionAnterior() {
+            const anteriorSection = currentSection === 1 ? totalSections : currentSection - 1;
+            const anteriorSectionElement = document.getElementById(`section${anteriorSection}`);
+            return anteriorSectionElement ? anteriorSectionElement.querySelector('h2').innerHTML : '';
+        }
+
+        // Función para obtener el título de la sección siguiente
+        function getTituloSeccionSiguiente() {
+            const siguienteSection = currentSection === totalSections ? 1 : currentSection + 1;
+            const siguienteSectionElement = document.getElementById(`section${siguienteSection}`);
+            return siguienteSectionElement ? siguienteSectionElement.querySelector('h2').innerHTML : '';
+        }
+    </script>
+
+</body>
+
+</html>
