@@ -72,16 +72,16 @@ function showSectionTitles() {
 
 function getPreviousSectionTitle() {
 
-    const anteriorSection = currentSection === 1 ? totalSections : currentSection - 1;
-    const anteriorSectionElement = document.getElementById(`section${anteriorSection}`);
-    return anteriorSectionElement ? anteriorSectionElement.querySelector('h2').innerHTML : '';
+    const previousSection = currentSection === 1 ? totalSections : currentSection - 1;
+    const previousSectionElement = document.getElementById(`section${previousSection}`);
+    return previousSectionElement ? previousSectionElement.querySelector('h2').innerHTML : '';
 
 }
 
 function getNextSectionTitle() {
 
-    const siguienteSection = currentSection === totalSections ? 1 : currentSection + 1;
-    const siguienteSectionElement = document.getElementById(`section${siguienteSection}`);
-    return siguienteSectionElement ? siguienteSectionElement.querySelector('h2').innerHTML : '';
+    const nextSection = currentSection === totalSections ? 1 : currentSection + 1;
+    const nextSectionElement = document.getElementById(`section${nextSection}`);
+    return nextSectionElement ? nextSectionElement.querySelector('h2').innerHTML : '';
 
 }
