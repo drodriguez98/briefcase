@@ -1,38 +1,41 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: rgba(10, 10, 10, 0.25);  
     /*
-        background-color: black;  
-        background-image: url("assets/img/background-3.jpg");
-        background-attachment: fixed; 
-        background-position: center; 
-        background-size: cover;
+    
+    background-color: black;  
+    background-image: url("assets/img/background-3.jpg");
+    background-attachment: fixed; 
+    background-position: center; 
+    background-size: cover;
+
     */
 }
 
 /* Contenedor principal de la página */
 
 #container {
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    min-height: 100vh; 
     display: flex; 
     flex-direction: column;
-    min-height: 100vh; 
-    width: 70%;
-    transition: opacity 1.5s ease-in-out;
-    padding: 0;
     user-select: none;  
     background-color: rgba(0, 0, 0, 0.45);
+    transition: opacity 1.5s ease-in-out;
 }
 
 video {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    position: fixed;
     object-fit: cover;
     z-index: -1;
 }
@@ -40,14 +43,18 @@ video {
 /* Estilos para el encabezado de la página */
 
 #header {
+    padding:0;
+    margin: 0;
+    width: 100%;
     display: flex; 
     flex-wrap: wrap; 
-    width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 30px;
+    margin-top: 50px;
+    /*justify-content: space-evenly; */
 }
+
+/*
 
 #header-text {
     font-family: 'Blacklisted', sans-serif; 
@@ -57,20 +64,22 @@ video {
     color: white;
 }
 
+#header-text:hover { animation: tilt 0.3s ease infinite alternate; } 
+
+*/
+
 #header .my-photo {
+    width: 175px;
+    height: 175px;
     background-image: url("assets/img/me.png");
     background-color: rgb(243, 224, 243);
     background-attachment: fixed; 
     background-position: center; 
     background-size: cover;
-    width: 175px;
-    height: 175px;
     border-radius: 50%;
-    animation: bounce 2s ease-in-out infinite;
     box-shadow: 0 0 4px 2px white; 
+    animation: bounce 2s ease-in-out infinite;  
 }
-
-#header-text:hover { animation: tilt 0.3s ease infinite alternate; }
 
 /* Clase para ocultar elementos */
 
@@ -78,86 +87,86 @@ video {
 
 /* Estilos para el menú de navegación */
 
+/* Estilos para la barra de navegación */
+
 #navigation {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    text-align: center; 
-    margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
 }
 
 #navigation ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    list-style: none; 
+    transform: scale(1); 
 }
 
-#navigation li {
-    margin: 0 15px;
-}
+#navigation ul li { margin: 0 50px; }
 
-#navigation .nav-link {
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
+#navigation ul li a {
+    display: inline-block;
     font-family: 'Raleway', sans-serif;
+    font-size: 20px; 
     font-weight: bold; 
+    line-height: 2.5;
+    text-decoration: none; 
+    cursor: pointer;
     color: white;
-    background-color: rgba(255, 255, 255, 0);
+
+
 }
 
-#navigation li:hover { animation:tilt 0.3s ease infinite alternate; }
-
-#navigation a:hover,
-#navigation a.active {
-  border-bottom: 2px solid white;
-}
-
+#navigation a.active, #navigation a:hover { border-bottom: 2px solid white; }
 
 /* Estilos para la sección principal de la página */
 
 #main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     display: flex; 
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    margin-top: 30px;
 }
 
 /* Estilos para las secciones individuales */
 
 #main section {
-    width: 65%;
-    min-height: 250px;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out; 
-    background-color: rgba(10, 10, 10, 0.9); 
-    font-family: 'Raleway', sans-serif;
-    color: white;
+    display: none;
+    width: 75%;
+    margin: 50px auto;
+    padding: 40px;
     box-shadow: 0 0 5px 1px white;
     border-radius: 10px; 
     cursor: pointer; 
-    margin: 50px auto;
-    display: none;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out; 
+    background-color: rgba(10, 10, 10, 0.9); 
+    color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 #main section:hover { transform: scale(1.05); }
 
 #main section h2 {
     text-align: center; 
-    font-size: 22px; 
-    margin: 40px; 
+    font-size: 20px; 
+    padding: 0;
+    margin-bottom: 35px;
 }
 
 #main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
 
 #main section p {
-    font-size: 16px; 
+    font-size: 15px; 
     line-height: 2; 
-    margin: 50px;
+    margin: 30px;
 }
 
 #main section .technologies-img-container, #main section .contact-links-container {
