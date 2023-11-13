@@ -117,8 +117,6 @@ video {
     text-decoration: none; 
     cursor: pointer;
     color: white;
-
-
 }
 
 #navigation a.active, #navigation a:hover { border-bottom: 2px solid white; }
@@ -133,7 +131,6 @@ video {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 /* Estilos para las secciones individuales */
@@ -155,6 +152,8 @@ video {
 
 #main section:hover { transform: scale(1.05); }
 
+/*
+
 #main section h2 {
     text-align: center; 
     font-size: 20px; 
@@ -163,24 +162,75 @@ video {
 
 #main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
 
+*/
+
 #main section p {
     font-size: 15px; 
     line-height: 2; 
 }
 
-#main section .technologies-img-container, #main section .contact-links-container {
+#main #section2 .project-subsection {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+#main #section2 h3 {
+    text-align: center;
+}
+
+#main #section2 .project-subsection .project-subsection-nav-link {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
 }
 
-#main section .technologies-img-container img {
+#main #section2 .project-subsection .demo-img-container  {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+#main #section2 .project-subsection .demo-img-container img {
+    width: 450px;
+    height: 450px;
+    padding: 30px;
+}
+
+#main #section2 .project-subsection img {
     width: 60px;
     height: 60px;
     padding: 30px;
 }
 
-#main section .contact-links-container img {
+#main #section2 #next-project-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px; 
+    font-weight: bold; 
+    line-height: 2.5;
+    text-decoration: none; 
+    cursor: pointer;
+    color: white;
+    background-color: rgba(10, 10, 10, 0.9);
+    border: none;
+}
+
+#main #section3 .technologies-img-container, #main #section4 .contact-links-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+#main #section3 .technologies-img-container img {
+    width: 60px;
+    height: 60px;
+    padding: 30px;
+}
+
+#main #section4 .contact-links-container img {
     height: 50px;
     width: 50px;
     padding: 30px;
