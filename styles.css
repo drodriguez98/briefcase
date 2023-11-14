@@ -42,20 +42,7 @@ video {
 
 /* Estilos para el encabezado de la página */
 
-#header {
-    padding:0;
-    margin: 0;
-    width: 100%;
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    /*justify-content: space-evenly; */
-}
-
 /*
-
 #header-text {
     font-family: 'Blacklisted', sans-serif; 
     font-size: 75px;
@@ -65,27 +52,11 @@ video {
 }
 
 #header-text:hover { animation: tilt 0.3s ease infinite alternate; } 
-
 */
-
-#header .my-photo {
-    width: 175px;
-    height: 175px;
-    background-image: url("assets/img/me.png");
-    background-color: rgb(243, 224, 243);
-    background-attachment: fixed; 
-    background-position: center; 
-    background-size: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px white; 
-    animation: bounce 2s ease-in-out infinite;  
-}
 
 /* Clase para ocultar elementos */
 
 .hidden { display: none; }
-
-/* Estilos para el menú de navegación */
 
 /* Estilos para la barra de navegación */
 
@@ -150,23 +121,46 @@ video {
     color: white;  
 }
 
-#main section:hover { transform: scale(1.05); }
-
-/*
+/* #main section:hover { transform: scale(1.05); } */
 
 #main section h2 {
     text-align: center; 
-    font-size: 20px; 
     margin-bottom: 45px;
+    font-size: 22px; 
 }
 
 #main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
 
-*/
-
 #main section p {
     font-size: 15px; 
     line-height: 2; 
+}
+
+#photo-container {
+    padding:0;
+    margin: 0;
+    width: 100%;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 45px;
+
+    /*justify-content: space-evenly; */
+}
+
+#photo-container .my-photo {
+    width: 250px;
+    height: 250px;
+    background-image: url("assets/img/me.png");
+    background-color: rgb(243, 224, 243);
+    background-attachment: fixed; 
+    background-position: center; 
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px white; 
+    /* animation: bounce 2s ease-in-out infinite;  */
 }
 
 #main #section2 .project-subsection {
@@ -180,6 +174,7 @@ video {
 
 #main #section2 h3 {
     text-align: center;
+    font-size: 20px; 
 }
 
 #main #section2 .project-subsection li {
@@ -201,8 +196,8 @@ video {
 }
 
 #main #section2 .project-subsection .demo-img-container img {
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 550px;
     padding: 30px;
 }
 
@@ -259,7 +254,7 @@ video {
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
 
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-6px); }
 }
 
 /* Fuentes personalizadas */
