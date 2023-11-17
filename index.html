@@ -30,7 +30,7 @@
             <div class="contact-links-container">
                 <a href="https://github.com/drodriguez98" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
                 <a href="https://es.linkedin.com/in/drodriguez98" target="_blank"><img src="assets/img/linkedin.png" class="contact-link-img" alt="linkedin"/></a>
-                <a href="#" target="_blank"><img src="assets/img/gmail.png" class="contact-link-img" alt="gmail"/></a>
+                <a href="#" target="_blank"><img src="assets/img/gmail.png" id="gmail-link" class="contact-link-img" alt="gmail"/></a>
             </div>
 
             <div id="navigation">
@@ -341,20 +341,24 @@
 
             </div>
 
-            <form action="https://formspree.io/f/xeqbwrql" method="POST">
-                <label>
-                  Tu correo electrónico:
-                  <input type="email" name="email">
-                </label>
-                <label>
-                  Tu mensaje:
-                  <textarea name="message"></textarea>
-                </label>
-                <!-- Otros campos de tu formulario van aquí -->
-                <button type="submit">Enviar</button>
-              </form>
-              
+            <form id="contact-form" action="https://formspree.io/f/xeqbwrql" method="POST" class="hidden-form">
 
+                <label>  Tu correo electrónico:
+
+                  <input type="email" name="email">
+
+                </label>
+
+                <label> Tu mensaje:
+
+                  <textarea name="message"></textarea>
+
+                </label>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+              
         </div>
 
         <footer></footer>

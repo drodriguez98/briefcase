@@ -224,6 +224,8 @@ body {
     padding: 30px;
 }
 
+.hidden-form { display: none; }
+
 /* Keyframes */
 
 @keyframes tilt {
