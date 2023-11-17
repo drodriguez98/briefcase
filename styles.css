@@ -21,7 +21,7 @@ body {
 #container {
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 100%;
     min-height: 100vh; 
     display: flex; 
     flex-direction: column;
@@ -108,7 +108,7 @@ video {
 
 #main section {
     display: none;
-    width: 70%;
+    width: 60%;
     margin: 70px auto;
     padding: 50px;
     transform: scale(1);
@@ -146,13 +146,11 @@ video {
     align-items: center;
     margin-top: 10px;
     margin-bottom: 45px;
-
-    /*justify-content: space-evenly; */
 }
 
 #photo-container .my-photo {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     background-image: url("assets/img/me.png");
     background-color: rgb(243, 224, 243);
     background-attachment: fixed; 
@@ -196,10 +194,10 @@ video {
 }
 
 #main #section2 .section2-subsection .demo-img-container img {
-    width: 95%; /* La imagen se ajustará al 100% del contenedor */
-    height: auto; /* Altura automática basada en el ancho */
-    display: block; /* Elimina espacios entre imágenes (opcional) */
-    margin: 0 auto; /* Centrar las imágenes horizontalmente (opcional) */
+    width: 75%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
 }
 
 #main #section2 .section2-subsection img {
@@ -208,7 +206,12 @@ video {
     padding: 30px;
 }
 
-#main #section2 #next-item-btn {
+#main #section2 .section2-subsection-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main #section2 #next-item-btn, #main #section2 #prev-item-btn {
     font-family: 'Raleway', sans-serif;
     font-size: 17px; 
     font-weight: bold; 
@@ -220,19 +223,19 @@ video {
     border: none;
 }
 
-#main #section3 .technologies-img-container, #main #section4 .contact-links-container {
+#main #section2 .technologies-img-container, #main #section3 .contact-links-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
 }
 
-#main #section3 .technologies-img-container img {
+#main #section2 .technologies-img-container img {
     width: 60px;
     height: 60px;
     padding: 30px;
 }
 
-#main #section4 .contact-links-container img {
+#main #section3 .contact-links-container img {
     height: 50px;
     width: 50px;
     padding: 30px;
