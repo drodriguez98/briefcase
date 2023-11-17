@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetSection) { targetSection.style.display = "block"; }
 
             // Resalta el enlace activo
+
             navLinks.forEach(navLink => { navLink.classList.remove("active"); });
 
             link.classList.add("active");
@@ -38,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (targetSectionId === "section2") { showCurrentProject(); }
 
+            // Desplaza suavemente hacia arriba al cambiar de sección
+
+            const targetElement = document.getElementById("container");
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
         });
 
     });
@@ -55,14 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // Muestra el proyecto actual
 
         projectsSubsection[currentItemProjectsSubsection].style.display = "block";
+
     }
 
     // Botón para avanzar al siguiente proyecto
 
     if (nextProjectBtn) {
 
-        nextProjectBtn.addEventListener("click", function () { 
-            
+        nextProjectBtn.addEventListener("click", function () {
+
             const projectsSubsection = document.querySelectorAll(".section2-subsection");
 
             // Oculta el proyecto actual
@@ -76,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Muestra el siguiente proyecto
 
             showCurrentProject();
+
+            // Desplaza suavemente hacia arriba al cambiar de sección
+
+            const targetElement = document.getElementById("container");
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         });
 
