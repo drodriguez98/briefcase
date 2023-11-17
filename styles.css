@@ -20,7 +20,7 @@ body {
     display: flex; 
     flex-direction: column;
     user-select: none;  
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: opacity 1.5s ease-in-out;
 }
 
@@ -76,7 +76,9 @@ body {
     color: white;
 }
 
-#navigation a.active, #navigation a:hover { border-bottom: 2px solid white; }
+#navigation a.active { border-bottom: 2px solid rgba(186, 155, 199, 0.7); color: rgba(186, 155, 199, 0.7); }
+
+#navigation a:hover { border-bottom: 2px solid white; color: white }
 
 /* Estilos para la sección principal de la página */
 
@@ -94,25 +96,26 @@ body {
 
 #main section {
     display: none;
-    width: 60%;
-    margin: 35px auto;
+    width: 75%;
+    margin: 50px auto;
     padding: 50px;
     transform: scale(1);
     transition: transform 0.3s ease-in-out; 
     cursor: pointer; 
     border-radius: 10px; 
-    box-shadow: 0 0 5px 1px white;
     font-family: 'Raleway', sans-serif;
-    background-color: rgba(10, 10, 10, 0.9); 
+    background-color: rgba(10, 10, 10, 0.95); 
     color: white;  
+    border: 1px solid rgba(186, 155, 199, 0.7);
 }
 
 /* #main section:hover { transform: scale(1.05); } */
 
 #main section h2 {
     text-align: center; 
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     font-size: 22px; 
+    color: rgba(186, 155, 199, 0.7);
 }
 
 #main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
@@ -121,6 +124,8 @@ body {
     font-size: 15px; 
     line-height: 2; 
     padding: 5px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 #main section ul li { padding: 5px; }
@@ -157,11 +162,6 @@ body {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
-}
-
-#main #section2 h3 {
-    text-align: center;
-    font-size: 20px; 
 }
 
 #main #section2 .section2-subsection li {
@@ -207,10 +207,12 @@ body {
     line-height: 2.5;
     text-decoration: none; 
     cursor: pointer;
-    color: white;
+    color: rgba(186, 155, 199, 0.7);
     background-color: rgba(10, 10, 10, 0.9);
     border: none;
 }
+
+#main #section2 #next-item-btn:hover, #main #section2 #prev-item-btn:hover { animation: tilt 0.25s ease infinite alternate; }
 
 #main #section2 .technologies-img-container {
     display: flex; 
@@ -239,9 +241,12 @@ body {
     width: 80%;
     margin-bottom: 20px; 
     padding: 10px;
-    border-radius: 10px; 
-    box-shadow: 0 0 5px 1px white;
+    border-radius: 5px; 
+    border: 1px solid rgba(186, 155, 199, 0.7)
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px; 
+    line-height: 2;
 }
 
 #main #section3 form textarea { min-height: 150px; }
