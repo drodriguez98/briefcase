@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navLinks = document.querySelectorAll("#navigation a");
     const firstSectionId = "section1";
-    const nextProjectBtn = document.getElementById("next-project-btn");
+    const nextProjectBtn = document.getElementById("next-item-btn");
 
-    let currentProjectIndex = 0;
+    let currentItemProjectsSubsection = 0;
 
     // Muestra la primera sección al cargar la página
 
@@ -46,30 +46,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showCurrentProject() {
 
-        const projects = document.querySelectorAll(".project-subsection");
+        const projectsSubsection = document.querySelectorAll(".section2-subsection");
 
         // Oculta todos los proyectos
 
-        projects.forEach(project => { project.style.display = "none"; });
+        projectsSubsection.forEach(itemProjectsSubsection => { itemProjectsSubsection.style.display = "none"; });
 
         // Muestra el proyecto actual
 
-        projects[currentProjectIndex].style.display = "block";
+        projectsSubsection[currentItemProjectsSubsection].style.display = "block";
     }
 
     // Botón para avanzar al siguiente proyecto
 
     if (nextProjectBtn) {
 
-        nextProjectBtn.addEventListener("click", function () { const projects = document.querySelectorAll(".project-subsection");
+        nextProjectBtn.addEventListener("click", function () { 
+            
+            const projectsSubsection = document.querySelectorAll(".section2-subsection");
 
             // Oculta el proyecto actual
 
-            projects[currentProjectIndex].style.display = "none";
+            projectsSubsection[currentItemProjectsSubsection].style.display = "none";
 
             // Avanza al siguiente proyecto
 
-            currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+            currentItemProjectsSubsection = (currentItemProjectsSubsection + 1) % projectsSubsection.length;
 
             // Muestra el siguiente proyecto
 
@@ -78,5 +80,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
-    
+
 });

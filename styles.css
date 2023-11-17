@@ -163,7 +163,7 @@ video {
     /* animation: bounce 2s ease-in-out infinite;  */
 }
 
-#main #section2 .projects-subsection {
+#main #section2 .section2-subsection {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -177,38 +177,38 @@ video {
     font-size: 20px; 
 }
 
-#main #section2 .projects-subsection li {
+#main #section2 .section2-subsection li {
     font-family: 'Raleway', sans-serif;
     font-size: 15px; 
     line-height: 2; 
 }
 
-#main #section2 .projects-subsection .projects-subsection-nav-link {
+#main #section2 .section2-subsection .section2-subsection-nav-link {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
 }
 
-#main #section2 .projects-subsection .demo-img-container  {
+#main #section2 .section2-subsection .demo-img-container  {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
 }
 
-#main #section2 .projects-subsection .demo-img-container img {
+#main #section2 .section2-subsection .demo-img-container img {
     width: 95%; /* La imagen se ajustará al 100% del contenedor */
     height: auto; /* Altura automática basada en el ancho */
     display: block; /* Elimina espacios entre imágenes (opcional) */
     margin: 0 auto; /* Centrar las imágenes horizontalmente (opcional) */
 }
 
-#main #section2 .projects-subsection img {
+#main #section2 .section2-subsection img {
     width: 60px;
     height: 60px;
     padding: 30px;
 }
 
-#main #section2 #next-project-btn {
+#main #section2 #next-item-btn {
     font-family: 'Raleway', sans-serif;
     font-size: 17px; 
     font-weight: bold; 
