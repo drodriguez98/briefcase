@@ -224,7 +224,27 @@ body {
     padding: 30px;
 }
 
-.hidden-form { display: none; }
+#main #section3 { width: 25%; }
+
+#main #section3 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #section3 form label { padding: 20px; }
+
+#main #section3 form input, #main #section3 form textarea { 
+    width: 80%;
+    margin-bottom: 20px; 
+    padding: 10px;
+    border-radius: 10px; 
+    box-shadow: 0 0 5px 1px white;
+    text-align: center;
+}
+
+#main #section3 form textarea { min-height: 150px; }
 
 /* Keyframes */
 
@@ -258,14 +278,8 @@ body {
     src: url('assets/fonts/snorter.ttf') format('opentype');
 }
 
-/* 
-body {
-    background-color: rgba(10, 10, 10, 0.25);  
-    background-color: black; 
-}
-*/
-
 /*
+
 video {
     top: 0;
     left: 0;
@@ -286,5 +300,6 @@ video {
     color: white;
 }
 
-#header-text:hover { animation: tilt 0.3s ease infinite alternate; } 
+#header-text:hover { animation: tilt 0.3s ease infinite alternate; }
+
 */

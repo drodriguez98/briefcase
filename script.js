@@ -4,15 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstSectionId = "section1";
     const nextProjectBtn = document.getElementById("next-item-btn");
     const prevProjectBtn = document.getElementById("prev-item-btn");
-    const gmailLink = document.getElementById("gmail-link");
-    const contactForm = document.getElementById("contact-form");
+    const formLink = document.querySelector('a[href="#section3"]');
+    const firstSection = document.getElementById(firstSectionId);
 
     let currentItemProjectsSubsection = 0;
-    let previousScrollPosition = 0;
 
     // Muestra la primera sección al cargar la página
-
-    const firstSection = document.getElementById(firstSectionId);
 
     if (firstSection) { firstSection.style.display = "block"; }
 
@@ -35,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 targetSection.style.display = "block";
 
                 // Resalta el enlace activo
+
                 navLinks.forEach(navLink => { navLink.classList.remove("active"); });
 
                 link.classList.add("active");
@@ -86,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             nextProjectBtn.style.display = "block";
 
         }
-        
+
     }
 
     // Botón para avanzar al siguiente proyecto
@@ -147,32 +145,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // Mostrar formulario al hacer clic en el enlace de Gmail
+    // Agrega un evento click al enlace del formulario
 
-    if (gmailLink && contactForm) {
+    formLink.addEventListener("click", function (event) {
 
-        gmailLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetSectionId = formLink.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetSectionId);
 
-            event.preventDefault();
+        if (targetSection) {
 
-            // Ocultar todas las secciones
+            // Ocultar todas las secciones excepto la sección del formulario
 
-            document.querySelectorAll("#main section").forEach(section => { section.style.display = "none"; });
+            document.querySelectorAll("#main section").forEach(section => {
 
-            // Guardar la posición actual del documento
+                if (section !== targetSection) {
 
-            previousScrollPosition = window.scrollY;
+                    section.style.display = "none";
 
-            // Mostrar el formulario
+                } else { section.style.display = "block"; } // Mostrar la sección del formulario 
 
-            contactForm.classList.remove("hidden-form");
+            });
 
-            // Desplazarse a la posición anterior
+            // Resaltar el enlace activo
 
-            window.scrollTo(0, previousScrollPosition);
+            navLinks.forEach(navLink => { navLink.classList.remove("active"); });
 
-        });
+            formLink.classList.add("active");
 
-    }
+            // Desplazar suavemente hacia arriba al cambiar a la sección del formulario
+
+            const targetElement = document.getElementById("container");
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        }
+
+    });
 
 });
