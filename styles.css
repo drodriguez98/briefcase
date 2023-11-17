@@ -196,7 +196,7 @@ video {
 }
 
 #main #section2 .project-subsection .demo-img-container img {
-    width: 100%; /* La imagen se ajustará al 100% del contenedor */
+    width: 95%; /* La imagen se ajustará al 100% del contenedor */
     height: auto; /* Altura automática basada en el ancho */
     display: block; /* Elimina espacios entre imágenes (opcional) */
     margin: 0 auto; /* Centrar las imágenes horizontalmente (opcional) */
