@@ -4,16 +4,10 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(10, 10, 10, 0.25);  
-    /*
-    
-    background-color: black;  
-    background-image: url("assets/img/background-3.jpg");
+    background-image: url("assets/img/background-2.jpg");
     background-attachment: fixed; 
     background-position: center; 
     background-size: cover;
-
-    */
 }
 
 /* Contenedor principal de la página */
@@ -30,29 +24,19 @@ body {
     transition: opacity 1.5s ease-in-out;
 }
 
-video {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    object-fit: cover;
-    z-index: -1;
+#container .contact-links-container {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* Estilos para el encabezado de la página */
-
-/*
-#header-text {
-    font-family: 'Blacklisted', sans-serif; 
-    font-size: 75px;
-    transition: transform 0.2s; 
-    border-radius: 10px;
-    color: white;
+#container .contact-links-container img {
+    height: 40px;
+    width: 40px;
+    padding: 15px;
 }
-
-#header-text:hover { animation: tilt 0.3s ease infinite alternate; } 
-*/
 
 /* Clase para ocultar elementos */
 
@@ -64,7 +48,9 @@ video {
     padding: 0;
     margin: 0;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 #navigation ul {
@@ -109,7 +95,7 @@ video {
 #main section {
     display: none;
     width: 60%;
-    margin: 70px auto;
+    margin: 35px auto;
     padding: 50px;
     transform: scale(1);
     transition: transform 0.3s ease-in-out; 
@@ -134,9 +120,12 @@ video {
 #main section p {
     font-size: 15px; 
     line-height: 2; 
+    padding: 5px;
 }
 
-#photo-container {
+#main section ul li { padding: 5px; }
+
+#main #section1 #photo-container {
     padding:0;
     margin: 0;
     width: 100%;
@@ -148,9 +137,9 @@ video {
     margin-bottom: 45px;
 }
 
-#photo-container .my-photo {
-    width: 220px;
-    height: 220px;
+#main #section1 #photo-container .my-photo {
+    width: 200px;
+    height: 200px;
     background-image: url("assets/img/me.png");
     background-color: rgb(243, 224, 243);
     background-attachment: fixed; 
@@ -187,6 +176,12 @@ video {
     justify-content: center;
 }
 
+#main #section2 .section2-subsection img {
+    width: 60px;
+    height: 60px;
+    padding: 30px;
+}
+
 #main #section2 .section2-subsection .demo-img-container  {
     display: flex; 
     flex-wrap: wrap; 
@@ -198,12 +193,6 @@ video {
     height: auto; 
     display: block; 
     margin: 0 auto;
-}
-
-#main #section2 .section2-subsection img {
-    width: 60px;
-    height: 60px;
-    padding: 30px;
 }
 
 #main #section2 .section2-subsection-buttons {
@@ -223,7 +212,7 @@ video {
     border: none;
 }
 
-#main #section2 .technologies-img-container, #main #section3 .contact-links-container {
+#main #section2 .technologies-img-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
@@ -232,12 +221,6 @@ video {
 #main #section2 .technologies-img-container img {
     width: 60px;
     height: 60px;
-    padding: 30px;
-}
-
-#main #section3 .contact-links-container img {
-    height: 50px;
-    width: 50px;
     padding: 30px;
 }
 
@@ -272,3 +255,36 @@ video {
     font-family: 'Snorter';
     src: url('assets/fonts/snorter.ttf') format('opentype');
 }
+
+/* BORRADOR */
+
+/* 
+body {
+    background-color: rgba(10, 10, 10, 0.25);  
+    background-color: black; 
+}
+*/
+
+/*
+video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+*/
+
+/*
+#header-text {
+    font-family: 'Blacklisted', sans-serif; 
+    font-size: 75px;
+    transition: transform 0.2s; 
+    border-radius: 10px;
+    color: white;
+}
+
+#header-text:hover { animation: tilt 0.3s ease infinite alternate; } 
+*/
