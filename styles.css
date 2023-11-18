@@ -30,6 +30,7 @@ body {
     flex-wrap: wrap; 
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 8px;
 }
 
 #container .contact-links-container img {
@@ -51,7 +52,7 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
-    margin-top: 10px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
 }
@@ -63,7 +64,6 @@ body {
     flex-wrap: wrap; 
     justify-content: center;
     list-style: none; 
-    transform: scale(1); 
 }
 
 #navigation ul li { margin: 0 50px; }
@@ -100,11 +100,10 @@ body {
 #main section {
     display: none;
     width: 65%;
-    margin: 35px auto;
-    padding: 40px;
+    padding: 25px;
+    margin: 0 auto;
     transform: scale(1);
-    transition: transform 0.3s ease-in-out; 
-    cursor: pointer; 
+    /* transition: transform 0.3s ease-in-out; */
     border-radius: 10px; 
     font-family: 'Raleway', sans-serif;
     background-color: rgba(10, 10, 10, 0.98); 
@@ -116,18 +115,18 @@ body {
 
 #main section h2 {
     text-align: center; 
-    margin-bottom: 20px;
+    margin: 30px;
     font-size: 22px; 
     color: rgba(113, 169, 241, 0.9);
 }
 
-#main section h2:hover { animation: rotate 0.4s ease-in-out forwards; }
+#main section h2:hover { animation: rotate 0.4s ease-in-out forwards; } 
 
 #main section p, #main section ul li {
-    font-size: 13.5px; 
+    font-size: 14px; 
     line-height: 2.5; 
     padding: 10px;
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -139,7 +138,7 @@ body {
     flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
-    margin-bottom: 45px;
+    margin: 20px auto;
 }
 
 #main #section1 #photo-container .my-photo {
@@ -164,39 +163,40 @@ body {
     justify-content: center;
 }
 
-#main #section2 .section2-subsection li {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px; 
-    line-height: 2; 
-}
-
-#main #section2 .section2-subsection .li-title {
-    color: rgba(113, 169, 241, 0.9);
-}
-
-#main #section2 .section2-subsection .section2-subsection-nav-link {
+#main #section2 .technologies-img-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
 }
 
-#main #section2 .section2-subsection img {
+#main #section2 .technologies-img-container img {
     width: 60px;
     height: 60px;
     padding: 30px;
-    transform: scale(1); 
 }
 
-#main #section2 .section2-subsection .technologies-img-container img:hover { transform: scale(1.20);  }
+#main #section2 .section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
 
-#main #section2 .section2-subsection .demo-img-container  {
+#main #section2 .section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
+
+#main #section2 .section2-subsection .demo-img-container,
+#main #section2 .section2-subsection .section2-subsection-nav-link  { 
     display: flex; 
     flex-wrap: wrap; 
+    flex-direction: row;
     justify-content: center;
+    margin: 30px; 
+}
+
+#main #section2 .section2-subsection .technologies-img-container img,
+#main #section2 .section2-subsection .section2-subsection-nav-link img { 
+    height: 50px;
+    width: 50px;
+    padding: 25px;
 }
 
 #main #section2 .section2-subsection .demo-img-container img {
-    width: 75%;
+    width: 80%;
     height: auto; 
     display: block; 
     margin: 0 auto;
@@ -204,7 +204,7 @@ body {
 
 #main #section2 .section2-subsection-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #main #section2 #next-item-btn, #main #section2 #prev-item-btn {
@@ -220,21 +220,11 @@ body {
 }
 
 #main #section2 #next-item-btn:hover, 
-#main #section2 #prev-item-btn:hover { animation: tilt 0.25s ease infinite alternate; }
-
-#main #section2 .technologies-img-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
+#main #section2 #prev-item-btn:hover { 
+    animation: tilt 0.25s ease infinite alternate; 
 }
 
-#main #section2 .technologies-img-container img {
-    width: 60px;
-    height: 60px;
-    padding: 30px;
-}
-
-#main #section3 { width: 25%; }
+#main #section3 { width: 30%; }
 
 #main #section3 form {
     display: flex;
@@ -243,23 +233,80 @@ body {
     align-items: center;
 }
 
-#main #section3 form label { padding: 20px; }
-
+#main #section3 form label { margin: 20px; }
 
 #main #section3 form input, 
-#main #section3 form textarea { 
+#main #section3 form textarea,
+#main #section3 .btn-submit { 
     width: 80%;
-    margin-bottom: 20px; 
-    padding: 10px;
+    margin: 20px;
+    padding: 5px; 
     border-radius: 5px; 
-    border: 2px solid rgba(113, 169, 241, 0.9);
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 16px; 
     line-height: 2;
 }
 
-#main #section3 form textarea { min-height: 150px; }
+#main #section3 form textarea { min-height: 200px; }
+
+#main #section3 .btn-submit {
+    width: 50%;
+    margin-top: 25px;
+    transform: scale(1); 
+}
+
+#main #section3 .btn-submit:hover {
+    transform: scale(1.05); 
+    color: rgba(88, 154, 240, 0.9);
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+
+    #main #section1,
+    #main #section2,
+    #main #section3 {
+        width: 80%; /* Cambiar el ancho para dispositivos móviles */
+        padding: 20px; /* Añadir espacio alrededor del formulario */
+    }
+
+    #main #section2 .section2-subsection .demo-img-container img {
+        width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto;
+    }
+
+    #container .contact-links-container img,
+    #main #section2 .section2-subsection .technologies-img-container img {
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+    }
+
+    #main #section2 .section2-subsection .section2-subsection-nav-link img {
+        height: 40px;
+        width: 40px;
+        padding: 25px;
+    }
+
+    #main #section3 form label {
+        margin: 10px 0; /* Reducir el margen entre etiquetas */
+    }
+
+    #main #section3 form input,
+    #main #section3 form textarea {
+        width: 85%; /* Ancho completo para elementos de entrada y botón */
+    }
+
+    #main #section3 form textarea {
+        min-height: 150px; /* Reducir la altura mínima del área de texto */
+    }
+
+    #main #section3 .btn-submit { width: 50%;}
+}
 
 /* Keyframes */
 
