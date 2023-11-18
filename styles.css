@@ -170,6 +170,10 @@ body {
     line-height: 2; 
 }
 
+#main #section2 .section2-subsection .li-title {
+    color: rgba(113, 169, 241, 0.9);
+}
+
 #main #section2 .section2-subsection .section2-subsection-nav-link {
     display: flex; 
     flex-wrap: wrap; 
