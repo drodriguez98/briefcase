@@ -20,8 +20,8 @@ body {
     display: flex; 
     flex-direction: column;
     user-select: none;
-    /* background-color: rgba(0, 0, 0, 0.3); */
     transition: opacity 1.5s ease-in-out;
+    /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 #container .contact-links-container {
@@ -93,6 +93,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 /* Estilos para las secciones individuales */
@@ -100,22 +101,23 @@ body {
 #main section {
     display: none;
     width: 65%;
-    padding: 25px;
-    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
     transform: scale(1);
-    /* transition: transform 0.3s ease-in-out; */
     border-radius: 10px; 
     font-family: 'Raleway', sans-serif;
     background-color: rgba(10, 10, 10, 0.98); 
     color: white;  
     border: 1px solid rgba(113, 169, 241, 0.9);
+    /* transition: transform 0.3s ease-in-out; */
 }
 
 /* #main section:hover { transform: scale(1.05); } */
 
 #main section h2 {
     text-align: center; 
-    margin: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 22px; 
     color: rgba(113, 169, 241, 0.9);
 }
@@ -123,22 +125,21 @@ body {
 #main section h2:hover { animation: rotate 0.4s ease-in-out forwards; } 
 
 #main section p, #main section ul li {
-    font-size: 14px; 
-    line-height: 2.5; 
-    padding: 10px;
-    width: 85%;
-    margin: 0 auto;
+    font-size: 15.5px; 
+    line-height: 2; 
+    width: 86%;
+    margin: 30px auto;
 }
 
 #main #section1 #photo-container {
     padding:0;
-    margin: 0;
     width: 100%;
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    margin-top: 25px;
+    margin-bottom: 40px;
 }
 
 #main #section1 #photo-container .my-photo {
@@ -157,22 +158,22 @@ body {
 #main #section2 .section2-subsection {
     margin: 0;
     padding: 0;
-    width: 100%;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
+    width: 100%;
 }
 
 #main #section2 .technologies-img-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 #main #section2 .technologies-img-container img {
     width: 60px;
     height: 60px;
-    padding: 30px;
 }
 
 #main #section2 .section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
@@ -185,7 +186,7 @@ body {
     flex-wrap: wrap; 
     flex-direction: row;
     justify-content: center;
-    margin: 30px; 
+    margin-bottom: 25px;
 }
 
 #main #section2 .section2-subsection .technologies-img-container img,
@@ -204,14 +205,14 @@ body {
 
 #main #section2 .section2-subsection-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
 }
 
 #main #section2 #next-item-btn, #main #section2 #prev-item-btn {
     font-family: 'Raleway', sans-serif;
     font-size: 20px; 
     font-weight: bold; 
-    line-height: 2.5;
     text-decoration: none; 
     cursor: pointer;
     color: rgba(113, 169, 241, 0.9);
@@ -263,13 +264,22 @@ body {
 }
 
 /* Estilos para dispositivos móviles */
+
 @media only screen and (max-width: 768px) {
 
     #main #section1,
     #main #section2,
     #main #section3 {
-        width: 80%; /* Cambiar el ancho para dispositivos móviles */
-        padding: 20px; /* Añadir espacio alrededor del formulario */
+        width: 80%; 
+        padding: 30px; 
+    }
+
+    #main section h2 {
+
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 22px; 
+        color: rgba(113, 169, 241, 0.9);
     }
 
     #main #section2 .section2-subsection .demo-img-container img {
@@ -292,20 +302,21 @@ body {
         padding: 25px;
     }
 
-    #main #section3 form label {
-        margin: 10px 0; /* Reducir el margen entre etiquetas */
-    }
+    #main #section3 form label {  margin: 10px 0; }
 
     #main #section3 form input,
     #main #section3 form textarea {
-        width: 85%; /* Ancho completo para elementos de entrada y botón */
+        width: 85%; 
     }
 
-    #main #section3 form textarea {
-        min-height: 150px; /* Reducir la altura mínima del área de texto */
-    }
+    #main #section3 form textarea {  min-height: 150px; }
 
     #main #section3 .btn-submit { width: 50%;}
+
+    #main #section2 .technologies-img-container { margin-bottom: 30px; }
+
+    #main #section2 .section2-subsection .section2-subsection-nav-link  { margin: 20px auto; }
+
 }
 
 /* Keyframes */
