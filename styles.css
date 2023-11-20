@@ -154,7 +154,7 @@ section p, #main section ul li {
     background-position: center; 
     background-size: cover;
     border-radius: 50%;
-    border: 2px solid rgba(106, 153, 214, 0.7);
+    /* border: 2px solid rgba(106, 153, 214, 0.7); */
     /* animation: bounce 2s ease-in-out infinite;  */
 }
 
@@ -163,7 +163,7 @@ section p, #main section ul li {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 30px;
 }
 #section1 .download img {
     height: 35px;
@@ -194,6 +194,13 @@ section p, #main section ul li {
     width: 100%;
 }
 
+#section1 .technologies-img-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-bottom: 0;
+}
+
 #section2-subsection .technologies-img-container {
     display: flex; 
     flex-wrap: wrap; 
@@ -210,6 +217,7 @@ section p, #main section ul li {
     margin-bottom: 25px;
 }
 
+#section1 .technologies-img-container img,
 #section2-subsection .technologies-img-container img {
     width: 60px;
     height: 60px;
@@ -217,6 +225,7 @@ section p, #main section ul li {
 
 #section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
 
+#section1 .technologies-img-container img,
 #section2-subsection .technologies-img-container img,
 #section2-subsection .repository-link img { 
     height: 50px;
@@ -231,6 +240,7 @@ section p, #main section ul li {
     margin: 0 auto;
 }
 
+#section1 .technologies-img-container img:hover,
 #section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
 
 #section2 .section2-buttons {
@@ -319,6 +329,8 @@ section p, #main section ul li {
         animation: none; 
     }
 
+    #section1 .technologies-img-container { margin-bottom: 0; }
+
     #section2-subsection .project-img-container img {
         width: 100%;
         height: auto; 
@@ -327,6 +339,7 @@ section p, #main section ul li {
     }
 
     #contact-links img,
+    #section1 .technologies-img-container img,
     #section2-subsection .technologies-img-container img {
         height: 40px;
         width: 40px;
