@@ -300,15 +300,12 @@ body {
         font-size: 22px; 
         color: rgba(113, 169, 241, 0.9);
     }
-
-
-    #main #section1 .download a {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
     
-    #main #section1 .download a:hover { animation: none; }
-
+    #main #section1 .download a:hover,
+    #main #section2 #next-item-btn:hover, 
+    #main #section2 #prev-item-btn:hover { 
+        animation: none; 
+    }
 
     #main #section2 .section2-subsection .demo-img-container img {
         width: 100%;
