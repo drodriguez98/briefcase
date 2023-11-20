@@ -108,7 +108,7 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: rgba(10, 10, 10, 0.98); 
     color: white;  
-    border: 1px solid rgba(113, 169, 241, 0.9);
+    box-shadow: 0 0 12px rgba(113, 169, 241); 
     /* transition: transform 0.3s ease-in-out; */
 }
 
