@@ -79,7 +79,10 @@ body {
     color: white;
 }
 
-#nav a.active { border-bottom: 2px solid rgba(113, 169, 241, 0.9); color: rgba(113, 169, 241, 0.9); }
+#nav a.active { 
+    border-bottom: 2px solid rgba(113, 169, 241, 0.9);
+    color: rgba(113, 169, 241, 0.9); 
+}
 
 #nav a:hover { border-bottom: 2px solid white; color: white }
 
@@ -171,11 +174,9 @@ section p, #main section ul li {
     background-color: rgba(10, 10, 10, 0.9);
     border: none;
     margin: 0 auto;
-    
 }
 
-#section1 .download a:hover { 
-    animation: tilt 0.25s ease infinite alternate; }
+#section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
 
 #section2-subsection {
     margin: 0;
