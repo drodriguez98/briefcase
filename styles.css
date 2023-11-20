@@ -300,7 +300,10 @@ body {
         font-size: 22px; 
         color: rgba(113, 169, 241, 0.9);
     }
+
+    /* REVISAR ESTO */
     
+    #main section h2:hover,
     #main #section1 .download a:hover,
     #main #section2 #next-item-btn:hover, 
     #main #section2 #prev-item-btn:hover { 
