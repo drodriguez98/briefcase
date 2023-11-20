@@ -19,7 +19,7 @@ body {
     min-height: 100vh; 
     display: flex; 
     flex-direction: column;
-    /* user-select: none; */
+    user-select: none;
     transition: opacity 1.5s ease-in-out;
     /* background-color: rgba(0, 0, 0, 0.3); */
 }
