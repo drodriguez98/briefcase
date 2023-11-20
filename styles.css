@@ -174,7 +174,8 @@ section p, #main section ul li {
     
 }
 
-#section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
+#section1 .download a:hover { 
+    animation: tilt 0.25s ease infinite alternate; }
 
 #section2-subsection {
     margin: 0;
@@ -192,17 +193,8 @@ section p, #main section ul li {
     margin-bottom: 25px;
 }
 
-#section2-subsection .technologies-img-container img {
-    width: 60px;
-    height: 60px;
-}
-
-#section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
-
-#section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
-
-#section2-subsection .demo-img-container,
-#section2-subsection .section2-subsection-nav-link  { 
+#section2-subsection .project-img-container,
+#section2-subsection .repository-link  { 
     display: flex; 
     flex-wrap: wrap; 
     flex-direction: row;
@@ -210,21 +202,30 @@ section p, #main section ul li {
     margin-bottom: 25px;
 }
 
+#section2-subsection .technologies-img-container img {
+    width: 60px;
+    height: 60px;
+}
+
+#section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
+
 #section2-subsection .technologies-img-container img,
-#section2-subsection .section2-subsection-nav-link img { 
+#section2-subsection .repository-link img { 
     height: 50px;
     width: 50px;
     padding: 25px;
 }
 
-#section2-subsection .demo-img-container img {
+#section2-subsection .project-img-container img {
     width: 80%;
     height: auto; 
     display: block; 
     margin: 0 auto;
 }
 
-#section2 .section2-subsection-buttons {
+#section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
+
+#section2 .section2-buttons {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 15px;
@@ -302,8 +303,6 @@ section p, #main section ul li {
         font-size: 22px; 
         color: rgba(113, 169, 241, 0.9);
     }
-
-    /* REVISAR ESTO */
     
     #main section h2:hover,
     #main #section1 .download a:hover,
@@ -312,7 +311,13 @@ section p, #main section ul li {
         animation: none; 
     }
 
-    #section2-subsection .demo-img-container img {
+    #main #section1 .download a:hover,
+    #main #section2 #next-item-btn:hover, 
+    #main #section2 #prev-item-btn:hover { 
+        color: white; 
+    }
+
+    #section2-subsection .project-img-container img {
         width: 100%;
         height: auto; 
         display: block; 
@@ -326,7 +331,7 @@ section p, #main section ul li {
         padding: 10px;
     }
 
-    #section2-subsection .section2-subsection-nav-link img {
+    #section2-subsection .repository-link img {
         height: 40px;
         width: 40px;
         padding: 25px;
@@ -343,7 +348,7 @@ section p, #main section ul li {
 
     #main #section2 .technologies-img-container { margin-bottom: 30px; }
 
-    #section2-subsection .section2-subsection-nav-link  { margin: 20px auto; }
+    #section2-subsection .repository-link  { margin: 20px auto; }
 
 }
 
