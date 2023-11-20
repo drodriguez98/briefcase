@@ -24,7 +24,7 @@ body {
     /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
-#container .contact-links-container {
+#contact-links {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap; 
@@ -33,14 +33,14 @@ body {
     margin-bottom: 8px;
 }
 
-#container .contact-links-container img {
+#contact-links img {
     height: 40px;
     width: 40px;
     padding: 15px;
     transform: scale(1); 
 }
 
-#container .contact-links-container img:hover { transform: scale(1.2); }
+#contact-links img:hover { transform: scale(1.2); }
 
 /* Clase para ocultar elementos */
 
@@ -48,7 +48,7 @@ body {
 
 /* Estilos para la barra de navegación */
 
-#navigation {
+#nav {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -57,7 +57,7 @@ body {
     justify-content: center;
 }
 
-#navigation ul {
+#nav ul {
     margin: 0;
     padding: 0;
     display: flex; 
@@ -66,9 +66,9 @@ body {
     list-style: none; 
 }
 
-#navigation ul li { margin: 0 50px; }
+#nav ul li { margin: 0 50px; }
 
-#navigation ul li a {
+#nav ul li a {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-size: 20px; 
@@ -79,9 +79,9 @@ body {
     color: white;
 }
 
-#navigation a.active { border-bottom: 2px solid rgba(113, 169, 241, 0.9); color: rgba(113, 169, 241, 0.9); }
+#nav a.active { border-bottom: 2px solid rgba(113, 169, 241, 0.9); color: rgba(113, 169, 241, 0.9); }
 
-#navigation a:hover { border-bottom: 2px solid white; color: white }
+#nav a:hover { border-bottom: 2px solid white; color: white }
 
 /* Estilos para la sección principal de la página */
 
@@ -98,7 +98,7 @@ body {
 
 /* Estilos para las secciones individuales */
 
-#main section {
+section {
     display: none;
     width: 65%;
     margin-bottom: 20px;
@@ -114,7 +114,7 @@ body {
 
 /* #main section:hover { transform: scale(1.05); } */
 
-#main section h2 {
+section h2 {
     text-align: center; 
     margin-top: 40px;
     margin-bottom: 30px;
@@ -122,16 +122,16 @@ body {
     color: rgba(113, 169, 241, 0.9);
 }
 
-#main section h2:hover { animation: rotate 0.4s ease-in-out forwards; } 
+section h2:hover { animation: rotate 0.4s ease-in-out forwards; } 
 
-#main section p, #main section ul li {
+section p, #main section ul li {
     font-size: 15.5px; 
     line-height: 2; 
     width: 86%;
     margin: 30px auto;
 }
 
-#main #section1 #photo-container {
+#section1-img-container {
     padding:0;
     width: 100%;
     display: flex; 
@@ -142,7 +142,7 @@ body {
     margin-bottom: 40px;
 }
 
-#main #section1 #photo-container .my-photo {
+#section1-img-container .my-photo {
     width: 200px;
     height: 200px;
     background-image: url("assets/img/me.png");
@@ -155,12 +155,13 @@ body {
     /* animation: bounce 2s ease-in-out infinite;  */
 }
 
-#main #section1 .download {
+#section1 .download {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
 }
-#main #section1 .download a {
+
+#section1 .download a {
     font-family: 'Raleway', sans-serif;
     font-size: 20px; 
     font-weight: bold; 
@@ -173,9 +174,9 @@ body {
     
 }
 
-#main #section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
+#section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
 
-#main #section2 .section2-subsection {
+#section2-subsection {
     margin: 0;
     padding: 0;
     display: flex;
@@ -184,24 +185,24 @@ body {
     width: 100%;
 }
 
-#main #section2 .technologies-img-container {
+#section2-subsection .technologies-img-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
     margin-bottom: 25px;
 }
 
-#main #section2 .technologies-img-container img {
+#section2-subsection .technologies-img-container img {
     width: 60px;
     height: 60px;
 }
 
-#main #section2 .section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
+#section2-subsection .technologies-img-container img:hover { transform: scale(1.20); }
 
-#main #section2 .section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
+#section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
 
-#main #section2 .section2-subsection .demo-img-container,
-#main #section2 .section2-subsection .section2-subsection-nav-link  { 
+#section2-subsection .demo-img-container,
+#section2-subsection .section2-subsection-nav-link  { 
     display: flex; 
     flex-wrap: wrap; 
     flex-direction: row;
@@ -209,27 +210,28 @@ body {
     margin-bottom: 25px;
 }
 
-#main #section2 .section2-subsection .technologies-img-container img,
-#main #section2 .section2-subsection .section2-subsection-nav-link img { 
+#section2-subsection .technologies-img-container img,
+#section2-subsection .section2-subsection-nav-link img { 
     height: 50px;
     width: 50px;
     padding: 25px;
 }
 
-#main #section2 .section2-subsection .demo-img-container img {
+#section2-subsection .demo-img-container img {
     width: 80%;
     height: auto; 
     display: block; 
     margin: 0 auto;
 }
 
-#main #section2 .section2-subsection-buttons {
+#section2 .section2-subsection-buttons {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 15px;
 }
 
-#main #section2 #next-item-btn, #main #section2 #prev-item-btn {
+#section2 #next-item-btn, 
+#section2 #prev-item-btn {
     font-family: 'Raleway', sans-serif;
     font-size: 20px; 
     font-weight: bold; 
@@ -310,21 +312,21 @@ body {
         animation: none; 
     }
 
-    #main #section2 .section2-subsection .demo-img-container img {
+    #section2-subsection .demo-img-container img {
         width: 100%;
         height: auto; 
         display: block; 
         margin: 0 auto;
     }
 
-    #container .contact-links-container img,
-    #main #section2 .section2-subsection .technologies-img-container img {
+    #contact-links img,
+    #section2-subsection .technologies-img-container img {
         height: 40px;
         width: 40px;
         padding: 10px;
     }
 
-    #main #section2 .section2-subsection .section2-subsection-nav-link img {
+    #section2-subsection .section2-subsection-nav-link img {
         height: 40px;
         width: 40px;
         padding: 25px;
@@ -341,7 +343,7 @@ body {
 
     #main #section2 .technologies-img-container { margin-bottom: 30px; }
 
-    #main #section2 .section2-subsection .section2-subsection-nav-link  { margin: 20px auto; }
+    #section2-subsection .section2-subsection-nav-link  { margin: 20px auto; }
 
 }
 

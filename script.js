@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const navLinks = document.querySelectorAll("#navigation a");
+    const navLinks = document.querySelectorAll("#nav a");
     const firstSectionId = "section1";
     const nextProjectBtn = document.getElementById("next-item-btn");
     const prevProjectBtn = document.getElementById("prev-item-btn");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showCurrentProject() {
 
-        const projectsSubsection = document.querySelectorAll(".section2-subsection");
+        const projectsSubsection = document.querySelectorAll("#section2-subsection");
 
         // Oculta todos los proyectos
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         nextProjectBtn.addEventListener("click", function () {
 
-            const projectsSubsection = document.querySelectorAll(".section2-subsection");
+            const projectsSubsection = document.querySelectorAll("#section2-subsection");
 
             // Oculta el proyecto actual
 
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         prevProjectBtn.addEventListener("click", function () {
 
-            const projectsSubsection = document.querySelectorAll(".section2-subsection");
+            const projectsSubsection = document.querySelectorAll("#section2-subsection");
 
             // Oculta el proyecto actual
 
