@@ -19,7 +19,7 @@ body {
     min-height: 100vh; 
     display: flex; 
     flex-direction: column;
-    user-select: none;
+    /* user-select: none; */
     transition: opacity 1.5s ease-in-out;
     /* background-color: rgba(0, 0, 0, 0.3); */
 }
@@ -208,6 +208,26 @@ body {
     justify-content: space-evenly;
     margin-bottom: 15px;
 }
+
+#main #section1 .download {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+#main #section1 .download a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer;
+    color: rgba(113, 169, 241, 0.9);
+    background-color: rgba(10, 10, 10, 0.9);
+    border: none;
+    margin: 0 auto;
+    
+}
+
+#main #section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
 
 #main #section2 #next-item-btn, #main #section2 #prev-item-btn {
     font-family: 'Raleway', sans-serif;
