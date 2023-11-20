@@ -160,8 +160,15 @@ section p, #main section ul li {
 
 #section1 .download {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-bottom: 15px;
+    align-items: center;
+    margin: 20px;
+}
+#section1 .download img {
+    height: 35px;
+    width: 35px;
+    padding-right: 15px;
 }
 
 #section1 .download a {
@@ -173,7 +180,7 @@ section p, #main section ul li {
     color: rgba(113, 169, 241, 0.9);
     background-color: rgba(10, 10, 10, 0.9);
     border: none;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 #section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
