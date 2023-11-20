@@ -312,12 +312,6 @@ section p, #main section ul li {
         animation: none; 
     }
 
-    #main #section1 .download a:hover,
-    #main #section2 #next-item-btn:hover, 
-    #main #section2 #prev-item-btn:hover { 
-        color: white; 
-    }
-
     #section2-subsection .project-img-container img {
         width: 100%;
         height: auto; 
