@@ -103,9 +103,8 @@ body {
 
 section {
     display: none;
-    width: 65%;
+    width: 60%;
     margin-bottom: 20px;
-    padding: 20px;
     transform: scale(1);
     border-radius: 10px; 
     font-family: 'Raleway', sans-serif;
@@ -129,10 +128,10 @@ section h2 {
 
 section h2:hover { animation: rotate 0.4s ease-in-out forwards; } 
 
-section p, #main section ul li {
+section p, section ul li {
     font-size: 15.5px; 
     line-height: 2; 
-    width: 86%;
+    width: 85%;
     margin: 30px auto;
 }
 
@@ -143,8 +142,7 @@ section p, #main section ul li {
     flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 40px;
+    margin: 35px auto;
 }
 
 #section1-img-container .my-photo {
@@ -323,6 +321,11 @@ section p, #main section ul li {
     #main #section2 #next-item-btn:hover, 
     #main #section2 #prev-item-btn:hover { 
         animation: none; 
+    }
+
+    #section1-img-container {
+        margin-top: 15px;
+        margin-bottom: 35px;
     }
 
     #section1 .technologies-img-container { 
