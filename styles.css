@@ -112,6 +112,8 @@ section {
     background-color: rgba(10, 10, 10, 0.98); 
     color: white;  
     box-shadow: 0 0 12px rgba(113, 169, 241); 
+    justify-content: center;
+    align-items: center;
     /* transition: transform 0.3s ease-in-out; */
 }
 
