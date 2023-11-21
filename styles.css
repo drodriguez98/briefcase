@@ -42,9 +42,11 @@ body {
 
 #contact-links img:hover { transform: scale(1.2); }
 
-/* Clase para ocultar elementos */
+/* Clases para ocultar elementos y demás animaciones*/
 
 .hidden { display: none; }
+
+.dispel { animation: dispel 2s ease-in-out infinite; }
 
 /* Estilos para la barra de navegación */
 
@@ -385,6 +387,12 @@ section p, section ul li {
 }
 
 /* Keyframes */
+
+@keyframes dispel {
+    0% { opacity: 1;  }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 @keyframes tilt {
     0%, 100% { transform: rotate(0deg); }
