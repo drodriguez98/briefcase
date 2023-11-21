@@ -208,8 +208,19 @@ section p, section ul li {
     margin-bottom: 25px;
 }
 
-#section2-subsection .project-img-container,
-#section2-subsection .repository-link  { 
+#section2-subsection .repository-link {
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section2-subsection .repository-link .repository {
+    display: flex; 
+    margin: 0 auto;
+}
+
+#section2-subsection .project-img-container { 
     display: flex; 
     flex-wrap: wrap; 
     flex-direction: row;
@@ -219,9 +230,14 @@ section p, section ul li {
 
 #section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
 
+#section2-subsection .repository-link .repository img{
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+    padding: 18px;
+}
 #section1 .technologies-img-container img,
-#section2-subsection .technologies-img-container img,
-#section2-subsection .repository-link img { 
+#section2-subsection .technologies-img-container img { 
     height: 45px;
     width: 45px;
     padding: 15px;
@@ -240,7 +256,7 @@ section p, section ul li {
 #section2 .section2-buttons {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 15px;
+    margin: 25px;
 }
 
 #section2 #next-item-btn, 
@@ -360,7 +376,7 @@ section p, section ul li {
         width: 95%;
     }
 
-    #main #section3 .btn-submit { width: 50%;}
+    #main #section3 .btn-submit { width: 50%; }
 
     #main #section2 .technologies-img-container { margin-bottom: 30px; }
 
