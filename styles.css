@@ -200,7 +200,7 @@ section p, #main section ul li {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
-    margin-bottom: 0;
+    margin: 0 100px;
 }
 
 #section2-subsection .technologies-img-container {
@@ -219,20 +219,14 @@ section p, #main section ul li {
     margin-bottom: 25px;
 }
 
-#section1 .technologies-img-container img,
-#section2-subsection .technologies-img-container img {
-    width: 60px;
-    height: 60px;
-}
-
 #section2-subsection .li-title { color: rgba(113, 169, 241, 0.9); }
 
 #section1 .technologies-img-container img,
 #section2-subsection .technologies-img-container img,
 #section2-subsection .repository-link img { 
-    height: 50px;
-    width: 50px;
-    padding: 25px;
+    height: 45px;
+    width: 45px;
+    padding: 15px;
 }
 
 #section2-subsection .project-img-container img {
@@ -331,7 +325,9 @@ section p, #main section ul li {
         animation: none; 
     }
 
-    #section1 .technologies-img-container { margin-bottom: 0; }
+    #section1 .technologies-img-container { 
+        margin: 0 25px; 
+    }
 
     #section2-subsection .project-img-container img {
         width: 100%;
@@ -343,9 +339,9 @@ section p, #main section ul li {
     #contact-links img,
     #section1 .technologies-img-container img,
     #section2-subsection .technologies-img-container img {
-        height: 40px;
         width: 40px;
-        padding: 10px;
+        height: 40px;
+        line-height: 2;
     }
 
     #section2-subsection .repository-link img {
