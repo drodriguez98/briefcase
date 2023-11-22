@@ -220,7 +220,7 @@ section p, section ul li {
 #section2-subsection .repository-link .repository {
     display: flex; 
     margin: 0 auto;
-    color: rgba(113, 169, 241, 0.9)
+    color: rgb(140, 180, 233);
 }
 
 #section2-subsection .project-img-container { 
