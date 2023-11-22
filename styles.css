@@ -220,7 +220,10 @@ section p, section ul li {
 #section2-subsection .repository-link .repository {
     display: flex; 
     margin: 0 auto;
-    color: rgb(140, 180, 233);
+}
+
+#section2-subsection .repository-link .repository p {
+    font-size: 14px;
 }
 
 #section2-subsection .project-img-container { 
@@ -236,7 +239,7 @@ section p, section ul li {
 #section2-subsection .repository-link .repository img{
     height: 45px;
     width: 45px;
-    margin-left: 10px;
+    margin-right: 15px;
     padding: 18px;
 }
 #section1 .technologies-img-container img,
