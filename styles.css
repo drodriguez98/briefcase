@@ -182,7 +182,6 @@ section p, section ul li {
     color: rgba(113, 169, 241, 0.9);
     background-color: rgba(10, 10, 10, 0.9);
     border: none;
-    /* margin: 0 auto; */
 }
 
 #section1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
@@ -222,9 +221,7 @@ section p, section ul li {
     margin: 0 auto;
 }
 
-#section2-subsection .repository-link .repository p {
-    font-size: 14px;
-}
+#section2-subsection .repository-link .repository p { font-size: 14px; }
 
 #section2-subsection .project-img-container { 
     display: flex; 
@@ -350,9 +347,7 @@ section p, section ul li {
         margin-bottom: 35px;
     }
 
-    #section1 .technologies-img-container { 
-        margin: 0 25px; 
-    }
+    #section1 .technologies-img-container { margin: 0 25px; }
 
     #section2-subsection .project-img-container img {
         width: 100%;
