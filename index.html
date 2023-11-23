@@ -13,7 +13,9 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
 
-        <title>Diego Rodríguez</title>
+        <title id="title">Diego Rodríguez</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/i18next/dist/umd/i18next.min.js"></script>
 
     </head>
 
@@ -23,13 +25,39 @@
 
             <!-- <video autoplay muted loop> <source src="assets/img/background-1.mp4" type="video/mp4"> </video> -->
 
-            <div id="contact-links">
+            <div id="row">
 
-                <a href="#section3" target="_blank"><img src="assets/img/gmail.png" id="gmail-link" class="contact-link-img" alt="gmail"/></a>
+                <div id="contact">
 
-                <a href="https://es.linkedin.com/in/drodriguez98" target="_blank"><img src="assets/img/linkedin.png" class="contact-link-img" alt="linkedin"/></a>
+                    <a href="#section3" target="_blank">
+                        
+                        <img src="assets/img/gmail.png" id="gmail-link" class="contact-link-img" alt="gmail"/>
+                    
+                    </a>
 
-                <a href="https://github.com/drodriguez98" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
+                    <a href="https://es.linkedin.com/in/drodriguez98" target="_blank">
+                        
+                        <img src="assets/img/linkedin.png" class="contact-link-img" alt="linkedin"/>
+                    
+                    </a>
+
+                    <a href="https://github.com/drodriguez98" class="contact-link-img" target="_blank">
+                        
+                        <img src="assets/img/github.png"  alt="github"/>
+                    
+                    </a>
+                    
+                </div>
+
+                <div id="change-language">
+
+                    <a id="toggleButton" class="language-img" href="#">
+
+                        <img src="assets/img/spanish.png" alt="spanish">
+                        
+                    </a>
+
+                </div>
 
             </div>
 
@@ -37,9 +65,9 @@
 
                 <ul>
 
-                  <li><a href="#section1" class="nav-link nav-a1 active">PRESENTACIÓN</a></li>
+                  <li><a href="#section1" class="nav-link active" data-i18n="nav-a1">PRESENTACIÓN</a></li>
 
-                  <li><a href="#section2" class="nav-link nav-a2">PROYECTOS</a></li>
+                  <li><a href="#section2" class="nav-link" data-i18n="nav-a2">PROYECTOS</a></li>
 
                 </ul>
 
@@ -56,7 +84,7 @@
                         
                     </div>
 
-                    <p class="section1-p1">Desarrollador con experiencia en una amplia gama de tecnologías. Desde bases de datos como SQL hasta lenguajes de programación como Python, PHP, y Java, incluyendo el desarrollo con Spring Boot. Además, tengo experiencia en herramientas de front-end como HTML5, CSS3, Javascript, y el Framework Angular.</p>
+                    <p data-i18n="section1-p1">Desarrollador con experiencia en una amplia gama de tecnologías. Desde bases de datos como SQL hasta lenguajes de programación como Python, PHP, y Java, incluyendo el desarrollo con Spring Boot. Además, tengo experiencia en herramientas de front-end como HTML5, CSS3, Javascript, y el Framework Angular.</p>
 
                     <div class="technologies-img-container">
 
@@ -75,9 +103,9 @@
 
                     </div>
                     
-                    <p class="section1-p2"> Mi formación incluye un Grado de Educación Infantil, un Ciclo de Grado Superior en Administración de Sistemas en Red y un Bootcamp de Programación. A pesar de que mi carrera profesional está en sus primeras etapas, destaco mi enfoque autodidacta y mi capacidad para adaptarme rápidamente a nuevas tecnologías.</p>
+                    <p data-i18n="section1-p2"> Mi formación incluye un Grado de Educación Infantil, un Ciclo de Grado Superior en Administración de Sistemas en Red y un Bootcamp de Programación. A pesar de que mi carrera profesional está en sus primeras etapas, destaco mi enfoque autodidacta y mi capacidad para adaptarme rápidamente a nuevas tecnologías.</p>
 
-                    <p class="section1-p3">A día de hoy, mi objetivo es contribuir con mi experiencia a proyectos desafiantes y continuar aprendiendo y mejorando mis habilidades en el campo del desarrollo de software o web.</p>
+                    <p data-i18n="section1-p3">A día de hoy, mi objetivo es contribuir con mi experiencia a proyectos desafiantes y continuar aprendiendo y mejorando mis habilidades en el campo del desarrollo de software o web.</p>
 
                     <div class="download"> 
 
@@ -93,29 +121,35 @@
                 
                     <div class="section2-subsection" id="section2-subsection1">
 
-                        <h2 class="section2-item1-h2">SPRING BOOT & ANGULAR</h2>
+                        <h2 data-i18n="section2-item1-h2">SPRING BOOT & ANGULAR</h2>
 
-                        <p class="section2-item1-p1">Los siguientes dos proyectos comparten similitudes al estar desarrollados con Java utilizando Spring Boot para el backend y Angular o Thymeleaf para el frontend, ofreciendo diversas funcionalidades y permitiendo a los usuarios interactuar de manera diversa.</p>
+                        <p data-i18n="section2-item1-p1">Los siguientes dos proyectos comparten similitudes al estar desarrollados con Java utilizando Spring Boot para el backend y Angular o Thymeleaf para el frontend, ofreciendo diversas funcionalidades y permitiendo a los usuarios interactuar de manera diversa.</p>
 
-                        <p class="section2-item1-p2">Estos proyectos han brindado la oportunidad de adquirir y fortalecer habilidades clave, tales como:</p>
+                        <p data-i18n="section2-item1-p2">Estos proyectos han brindado la oportunidad de adquirir y fortalecer habilidades clave, tales como:</p>
                         
-                        <ul>
+                        <h3 class="p-title" data-i18n="section2-item1-p3-title"> Spring Boot y seguridad con Spring Security.</h3>
 
-                            <li id="section2-item1-li1"><span class="li-title">Spring Boot y seguridad con Spring Security.</span> Al desarrollar una aplicación utilizando Spring Boot, he adquirido experiencia en la creación de aplicaciones web robustas, implementando seguridad con Spring Security para proteger recursos y gestionar la autenticación y autorización de usuarios.</li>
-                            
-                            <li id="section2-item1-li2"><span class="li-title">Gestión de proyectos y manejo de datos.</span> A través de estas aplicaciones, he aprendido a diseñar y desarrollar sistemas para publicar proyectos, manejar donaciones, añadir comentarios, y gestionar interacciones entre usuarios, utilizando bases de datos y técnicas de búsqueda implementadas con JavaScript y formularios.</li>
-                            
-                            <li id="section2-item1-li3"><span class="li-title">Frontend con Angular y Thymeleaf.</span> El uso de Angular o Thymeleaf en el frontend ha proporcionado oportunidades para crear interfaces dinámicas y responsivas. Con Angular, he podido aprovechar herramientas como Angular Material y ngx-charts para mostrar datos de manera atractiva y eficiente, mientras que Thymeleaf me ha permitido generar plantillas de forma rápida y efectiva para el frontend.</li>
-                            
-                            <li id="section2-item1-li4"><span class="li-title">Manipulación y visualización de datos.</span> El manejo de datos y su visualización a través de gráficos o tablas, mediante el uso de herramientas como angular-material o ngx-charts, ha ampliado mi conocimiento en la presentación de información de manera efectiva y comprensible para los usuarios.</li>
+                        <p data-i18n="section2-item1-p4"> Al desarrollar una aplicación utilizando Spring Boot, he adquirido experiencia en la creación de aplicaciones web robustas, implementando seguridad con Spring Security para proteger recursos y gestionar la autenticación y autorización de usuarios.</p>
                         
-                        </ul>
+                        <h3 class="p-title" data-i18n="section2-item1-p5-title">Gestión de proyectos y manejo de datos.</h3> 
+
+                        <p data-i18n="section2-item1-p6">A través de estas aplicaciones, he aprendido a diseñar y desarrollar sistemas para publicar proyectos, manejar donaciones, añadir comentarios, y gestionar interacciones entre usuarios, utilizando bases de datos y técnicas de búsqueda implementadas con JavaScript y formularios.</p>
+                        
+                        <h3 class="p-title" data-i18n="section2-item1-p7-title">Frontend con Angular y Thymeleaf.</h3>
+
+                        <p data-i18n="section2-item1-p8"> El uso de Angular o Thymeleaf en el frontend ha proporcionado oportunidades para crear interfaces dinámicas y responsivas. Con Angular, he podido aprovechar herramientas como Angular Material y ngx-charts para mostrar datos de manera atractiva y eficiente, mientras que Thymeleaf me ha permitido generar plantillas de forma rápida y efectiva para el frontend.</p>
+                        
+                        <h3 class="p-title" data-i18n="section2-item1-p9-title">Manipulación y visualización de datos.</h3>
+
+                        <p data-i18n="section2-item1-p10"> El manejo de datos y su visualización a través de gráficos o tablas, mediante el uso de herramientas como angular-material o ngx-charts, ha ampliado mi conocimiento en la presentación de información de manera efectiva y comprensible para los usuarios.</p>
+                        
+
                         
                     </div>
 
                     <div class="section2-subsection" id="section2-subsection2">
 
-                        <h2 class="section2-item2-h2">APPMAZING</h2>
+                        <h2 data-i18n="section2-item2-h2">APPMAZING</h2>
 
                         <div class="technologies-img-container">
 
@@ -138,7 +172,7 @@
 
                                 <a href="https://github.com/drodriguez98/cd-appmazing-backend" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
 
-                                <p class="section2-item2-p1 dispel">Repositorio (Backend)</p>
+                                <p class="dispel" data-i18n="section2-item2-p1">Repositorio (Backend)</p>
 
                             </div>
 
@@ -146,7 +180,7 @@
 
                                 <a href="https://github.com/drodriguez98/cd-appmazing-frontend" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
 
-                                <p class="section2-item2-p2 dispel">Repositorio (Frontend)</p>
+                                <p class="dispel" data-i18n="section2-item2-p2">Repositorio (Frontend)</p>
 
                             </div>
                             
@@ -156,7 +190,7 @@
 
                     <div class="section2-subsection" id="section2-subsection3">
 
-                        <h2 class="section2-item3-h2">FUNDME</h2>
+                        <h2 data-i18n="section2-item3-h2">FUNDME</h2>
 
                         <div class="technologies-img-container">
 
@@ -182,7 +216,7 @@
 
                                 <a href="https://github.com/drodriguez98/drb-fundme" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a> 
 
-                                <p class="section2-item3-p dispel">Repositorio</p>
+                                <p class="dispel" data-i18n="section2-item3-p">Repositorio</p>
 
                             </div>
                         
@@ -192,31 +226,38 @@
 
                     <div class="section2-subsection" id="section2-subsection4">
 
-                        <h2 class="section2-item4-h2">PYTHON</h2>
+                        <h2 data-i18n="section2-item4-h2">PYTHON</h2>
 
-                        <p class="section2-item4-p1">Los siguientes tres proyectos también comparten similitudes, ya que todos están desarrollados con la biblioteca Pygame de Python y comparten ciertos elementos comunes en su estructura y funcionalidad.</p>
+                        <p data-i18n="section2-item4-p1">Los siguientes tres proyectos también comparten similitudes, ya que todos están desarrollados con la biblioteca Pygame de Python y comparten ciertos elementos comunes en su estructura y funcionalidad.</p>
 
-                        <p class="section2-item4-p2">Para desarrollarlos, he utilizado las siguientes tecnologías y técnicas.</p>
+                        <p data-i18n="section2-item4-p2">Para desarrollarlos, he utilizado las siguientes tecnologías y técnicas.</p>
+
+                        <h3 class="p-title" data-i18n="section2-item4-p3-title">Python y Pygame.</h3>
+                
+                        <p data-i18n="section2-item4-p4">El juego está escrito en Python y utiliza la biblioteca Pygame para manejar la interfaz gráfica, eventos de teclado, sonidos y animaciones.</p>
                         
-                        <ul>
+                        <h3 class="p-title" data-i18n="section2-item4-p5-title">Manipulación de gráficos.</h3>
 
-                            <li id="section2-item4-li1"><span class="li-title">Python y Pygame.</span> El juego está escrito en Python y utiliza la biblioteca Pygame para manejar la interfaz gráfica, eventos de teclado, sonidos y animaciones.</li>
-                            
-                            <li id="section2-item4-li2"><span class="li-title">Manipulación de gráficos.</span> Pygame proporciona funciones para dibujar gráficos en una ventana, como la creación de rectángulos de colores, animaciones y actualización de la pantalla.</li>
-                            
-                            <li id="section2-item4-li3"><span class="li-title">Eventos de usuario.</span> El juego responde a eventos de usuario, como clics de ratón y pulsaciones de teclas, para permitir la interacción del jugador.</li>
-                            
-                            <li id="section2-item4-li4"><span class="li-title">Sonidos y música.</span> Pygame se utiliza para reproducir sonidos y música cuando el jugador realiza acciones específicas, como coincidir con un patrón correcto o perder el juego.</li>
-                            
-                            <li id="section2-item4-li5"><span class="li-title">Control de tiempo.</span> El juego utiliza el módulo de tiempo para gestionar el tiempo, controlar la velocidad de las animaciones y establecer límites de tiempo para ciertas acciones, como el tiempo antes de que se considere que el jugador ha perdido.</li>
+                        <p data-i18n="section2-item4-p6">Pygame proporciona funciones para dibujar gráficos en una ventana, como la creación de rectángulos de colores, animaciones y actualización de la pantalla.</p>
 
-                        </ul>
+                        <h3 class="p-title" data-i18n="section2-item4-p7-title">Eventos de usuario.</h3>
+                        
+                        <p data-i18n="section2-item4-p8"> El juego responde a eventos de usuario, como clics de ratón y pulsaciones de teclas, para permitir la interacción del jugador.</p>
+                        
+                        <h3 class="p-title" data-i18n="section2-item4-p9-title">Sonidos y música.</h3>
+
+                        <p data-i18n="section2-item4-p10">Pygame se utiliza para reproducir sonidos y música cuando el jugador realiza acciones específicas, como coincidir con un patrón correcto o perder el juego.</p>
+                        
+                        <h3 class="p-title" data-i18n="section2-item4-p11-title">Control de tiempo.</h3>
+
+                        <p data-i18n="section2-item4-p12"> El juego utiliza el módulo de tiempo para gestionar el tiempo, controlar la velocidad de las animaciones y establecer límites de tiempo para ciertas acciones, como el tiempo antes de que se considere que el jugador ha perdido.</p>
+
 
                     </div>
 
                     <div class="section2-subsection" id="section2-subsection5">
 
-                        <h2 class="section2-item5-h2">SNAKE</h2>
+                        <h2 data-i18n="section2-item5-h2">SNAKE</h2>
 
                         <div class="technologies-img-container">
 
@@ -232,7 +273,7 @@
 
                                 <a href="https://github.com/drodriguez98/drb-snake" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
 
-                                <p class="section2-item5-p dispel">Repositorio</p>
+                                <p class="dispel" data-i18n="section2-item5-p">Repositorio</p>
 
                             </div>
 
@@ -242,7 +283,7 @@
 
                     <div class="section2-subsection" id="section2-subsection6">
 
-                        <h2 class="section2-item6-h2">SPACESHIP</h2>
+                        <h2 data-i18n="section2-item6-h2">SPACESHIP</h2>
 
                         <div class="technologies-img-container">
 
@@ -258,7 +299,7 @@
 
                                 <a href="https://github.com/drodriguez98/drb-spaceship" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
 
-                                <p class="section2-item6-p dispel">Repositorio</p>
+                                <p class="dispel" data-i18n="section2-item6-p">Repositorio</p>
 
                             </div>
 
@@ -268,27 +309,31 @@
 
                     <div class="section2-subsection" id="section2-subsection7">
 
-                        <h2 class="section2-item7-h2">PHP</h2>
+                        <h2 data-i18n="section2-item7-h2">PHP</h2>
 
-                        <p class="section2-item7-p">Los siguientes proyectos están desarrollados con PHP y MySQL. A continuación, resumo algunos conocimientos clave adquiridos en el desarrollo de estos proyectos.</p>
-                    
-                        <ul>
+                        <p data-i18n="section2-item7-p1">Los siguientes proyectos están desarrollados con PHP y MySQL. A continuación, resumo algunos conocimientos clave adquiridos en el desarrollo de estos proyectos.</p>
 
-                            <li id="section2-item7-li1"><span class="li-title">PHP y MySQL.</span> Estos proyectos me han permitido adquirir experiencia en la creación de aplicaciones web dinámicas, desde la gestión de la lógica del lado del servidor hasta el almacenamiento y recuperación de datos en una base de datos relacional.</li>
-                            
-                            <li id="section2-item7-li2"><span class="li-title">Interfaz de usuario con Bootstrap.</span> En uno de los proyectos, utilicé Bootstrap para desarrollar un diseño visual atractivo y amigable para el usuario, lo que me ha brindado conocimientos en el desarrollo de interfaces responsivas.</li>
-                            
-                            <li id="section2-item7-li3"><span class="li-title">Gestión de usuarios y datos.</span> A través de estas aplicaciones, he aprendido a implementar sistemas de autenticación de usuarios, así como a permitirles realizar acciones como agregar, editar y eliminar elementos, ya sean tareas, imágenes o productos, todo almacenado en una base de datos.</li>
-                            
-                            <li id="section2-item7-li4"><span class="li-title">Procesamiento de transacciones.</span> En el proyecto de venta de productos, adquirí conocimientos sobre la implementación de sistemas de compra en línea, gestión de carritos de compra, confirmación de pedidos y seguimiento del estado de las transacciones.</li>
+                        <h3 class="p-title" data-i18n="section2-item7-p2-title">PHP y MySQL.</h3>
 
-                        </ul>
+                        <p data-i18n="section2-item7-p3"> Estos proyectos me han permitido adquirir experiencia en la creación de aplicaciones web dinámicas, desde la gestión de la lógica del lado del servidor hasta el almacenamiento y recuperación de datos en una base de datos relacional.</p>
+
+                        <h3 class="p-title" data-i18n="section2-item7-p4-title">Interfaz de usuario con Bootstrap.</h3>
+                        
+                        <p data-i18n="section2-item7-p5"> En uno de los proyectos, utilicé Bootstrap para desarrollar un diseño visual atractivo y amigable para el usuario, lo que me ha brindado conocimientos en el desarrollo de interfaces responsivas.</p>
+                        
+                        <h3 class="p-title" data-i18n="section2-item7-p6-title">Gestión de usuarios y datos.</h3>
+
+                        <p data-i18n="section2-item7-p7"> A través de estas aplicaciones, he aprendido a implementar sistemas de autenticación de usuarios, así como a permitirles realizar acciones como agregar, editar y eliminar elementos, ya sean tareas, imágenes o productos, todo almacenado en una base de datos.</p>
+                        
+                        <h3 class="p-title" data-i18n="section2-item7-p8-title">Procesamiento de transacciones.</h3>
+
+                        <p data-i18n="section2-item7-p9"> En el proyecto de venta de productos, adquirí conocimientos sobre la implementación de sistemas de compra en línea, gestión de carritos de compra, confirmación de pedidos y seguimiento del estado de las transacciones.</p>
                         
                     </div>
 
                     <div class="section2-subsection" id="section2-subsection8">
 
-                        <h2 class="section2-item8-h2">TASKS</h2>
+                        <h2 data-i18n="section2-item8-h2">TASKS</h2>
 
                         <div class="technologies-img-container">
 
@@ -308,7 +353,7 @@
 
                                 <a href="https://github.com/drodriguez98/asir-app-tasks" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
 
-                                <p class="section2-item8-p dispel">Repositorio</p>
+                                <p class="dispel" data-i18n="section2-item8-p">Repositorio</p>
 
                             </div>
 
@@ -318,7 +363,7 @@
 
                     <div class="section2-subsection" id="section2-subsection9">
 
-                        <h2 class="section2-item9-h2">GALLERY</h2>
+                        <h2 data-i18n="section2-item9-h2">GALLERY</h2>
 
                         <div class="technologies-img-container">
 
@@ -341,7 +386,7 @@
 
                                 <a href="https://github.com/drodriguez98/asir-app-gallery" target="_blank"><img src="assets/img/github.png" class="contact-link-img" alt="github"/></a>
 
-                                <p class="section2-item9-p dispel">Repositorio</p>
+                                <p class="dispel" data-i18n="section2-item9-p">Repositorio</p>
 
                             </div>
 
@@ -351,8 +396,8 @@
 
                     <div class="section2-buttons">
 
-                        <button id="prev-item-btn">Retroceder</button>                    
-                        <button id="next-item-btn">Avanzar</button>
+                        <button id="prev-item-btn" data-i18n="prev-item-btn">Retroceder</button>                    
+                        <button id="next-item-btn" data-i18n="next-item-btn">Avanzar</button>
 
                     </div>
                 
@@ -362,15 +407,15 @@
                             
                     <form id="contact-form" action="https://formspree.io/f/xeqbwrql" method="POST">
 
-                        <label class="form-label-1">Correo electrónico </label>
+                        <label data-i18n="form-label-1">Correo electrónico </label>
 
                         <input type="email" name="email">
 
-                        <label class="form-label-2">Mensaje </label>
+                        <label data-i18n="form-label-2">Mensaje </label>
 
                         <textarea name="message"></textarea>
 
-                        <button class="btn-submit" type="submit">Enviar</button>
+                        <button class="btn-submit" data-i18n="btn-submit" type="submit">Enviar</button>
 
                     </form>
 
