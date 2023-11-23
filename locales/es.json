@@ -1,4 +1,75 @@
 {
-    "title": "¡Hola mundo!",
-    "content": "Este es un ejemplo de internacionalización."
-  }  
+  
+  "nav-a1": "PRESENTACIÓN",
+  "nav-a2": "PROYECTOS",
+
+  "toogle-button": "Cambiar idioma",
+
+  "section1-p1": "Desarrollador con experiencia en una amplia gama de tecnologías. Desde bases de datos como SQL hasta lenguajes de programación como Python, PHP, y Java, incluyendo el desarrollo con Spring Boot. Además, tengo experiencia en herramientas de front-end como HTML5, CSS3, Javascript, y el Framework Angular.",
+  "section1-p2": "Mi formación incluye un Grado de Educación Infantil, un Ciclo de Grado Superior en Administración de Sistemas en Red y un Bootcamp de Programación. A pesar de que mi carrera profesional está en sus primeras etapas, destaco mi enfoque autodidacta y mi capacidad para adaptarme rápidamente a nuevas tecnologías.",
+  "section1-p3": "A día de hoy, mi objetivo es contribuir con mi experiencia a proyectos desafiantes y continuar aprendiendo y mejorando mis habilidades en el campo del desarrollo de software o web.",
+
+  "prev-item-btn": "Retroceder",
+  "next-item-btn": "Avanzar", 
+
+  "section2-item1-h2": "SPRING BOOT & ANGULAR",
+  "section2-item1-p1": "Los siguientes dos proyectos comparten similitudes al estar desarrollados con Java utilizando Spring Boot para el backend y Angular o Thymeleaf para el frontend, ofreciendo diversas funcionalidades y permitiendo a los usuarios interactuar de manera diversa.",
+  "section2-item1-p2": "Estos proyectos han brindado la oportunidad de adquirir y fortalecer habilidades clave, tales como:",
+  "section2-item1-p3-title": "Spring Boot y seguridad con Spring Security.",
+  "section2-item1-p4": " Al desarrollar una aplicación utilizando Spring Boot, he adquirido experiencia en la creación de aplicaciones web robustas, implementando seguridad con Spring Security para proteger recursos y gestionar la autenticación y autorización de usuarios.",
+  "section2-item1-p5-title": "Gestión de proyectos y manejo de datos.",
+  "section2-item1-p6": " A través de estas aplicaciones, he aprendido a diseñar y desarrollar sistemas para publicar proyectos, manejar donaciones, añadir comentarios, y gestionar interacciones entre usuarios, utilizando bases de datos y técnicas de búsqueda implementadas con JavaScript y formularios.",
+  "section2-item1-p7-title": "Frontend con Angular y Thymeleaf.",
+  "section2-item1-p8": "El uso de Angular o Thymeleaf en el frontend ha proporcionado oportunidades para crear interfaces dinámicas y responsivas. Con Angular, he podido aprovechar herramientas como Angular Material y ngx-charts para mostrar datos de manera atractiva y eficiente, mientras que Thymeleaf me ha permitido generar plantillas de forma rápida y efectiva para el frontend.",
+  "section2-item1-p9-title": "Manipulación y visualización de datos.",
+  "section2-item1-p10": "El manejo de datos y su visualización a través de gráficos o tablas, mediante el uso de herramientas como angular-material o ngx-charts, ha ampliado mi conocimiento en la presentación de información de manera efectiva y comprensible para los usuarios.",
+
+  "section2-item2-h2": "APPMAZING",
+  "section2-item2-p1": "Repositorio (Backend)",
+  "section2-item2-p2": "Repositorio (Frontend)",
+
+  "section2-item3-h2": "FUNDME",
+  "section2-item3-p": "Repositorio",
+
+  "section2-item4-h2": "PYTHON",
+  "section2-item4-p1": "Los siguientes tres proyectos también comparten similitudes, ya que todos están desarrollados con la biblioteca Pygame de Python y comparten ciertos elementos comunes en su estructura y funcionalidad.",
+  "section2-item4-p2": "Para desarrollarlos, he utilizado las siguientes tecnologías y técnicas.",
+  "section2-item4-p3-title": "Python y Pygame.",
+  "section2-item4-p4": "El juego está escrito en Python y utiliza la biblioteca Pygame para manejar la interfaz gráfica, eventos de teclado, sonidos y animaciones.",
+  "section2-item4-p5-title": "Manipulación de gráficos.",
+  "section2-item4-p6": "Pygame proporciona funciones para dibujar gráficos en una ventana, como la creación de rectángulos de colores, animaciones y actualización de la pantalla.",
+  "section2-item4-p7-title": "Eventos de usuario.",
+  "section2-item4-p8": "El juego responde a eventos de usuario, como clics de ratón y pulsaciones de teclas, para permitir la interacción del jugador.",
+  "section2-item4-p9-title": "Sonidos y música.",
+  "section2-item4-p10": "Pygame se utiliza para reproducir sonidos y música cuando el jugador realiza acciones específicas, como coincidir con un patrón correcto o perder el juego.",
+  "section2-item4-p11-title": "Control de tiempo.",
+  "section2-item4-p12": "El juego utiliza el módulo de tiempo para gestionar el tiempo, controlar la velocidad de las animaciones y establecer límites de tiempo para ciertas acciones, como el tiempo antes de que se considere que el jugador ha perdido.",
+
+  "section2-item5-h2": "SNAKE",
+  "section2-item5-p": "Repositorio",
+
+  "section2-item6-h2": "SPACESHIP",
+  "section2-item6-p": "Repositorio",
+
+  "section2-item7-h2": "PHP",
+  "section2-item7-p1": "Los siguientes proyectos están desarrollados con PHP y MySQL. A continuación, resumo algunos conocimientos clave adquiridos en el desarrollo de estos proyectos.",
+  "section2-item7-p2-title": "PHP y MySQL.",
+  "section2-item7-p3": " Estos proyectos me han permitido adquirir experiencia en la creación de aplicaciones web dinámicas, desde la gestión de la lógica del lado del servidor hasta el almacenamiento y recuperación de datos en una base de datos relacional.",
+  "section2-item7-p4-title": "Interfaz de usuario con Bootstrap.",
+  "section2-item7-p5": "En uno de los proyectos, utilicé Bootstrap para desarrollar un diseño visual atractivo y amigable para el usuario, lo que me ha brindado conocimientos en el desarrollo de interfaces responsivas.",
+  "section2-item7-p6-title": "Gestión de usuarios y datos.",
+  "section2-item7-p7": "A través de estas aplicaciones, he aprendido a implementar sistemas de autenticación de usuarios, así como a permitirles realizar acciones como agregar, editar y eliminar elementos, ya sean tareas, imágenes o productos, todo almacenado en una base de datos.",
+  "section2-item7-p8-title": "Procesamiento de transacciones",
+  "section2-item7-p9": "En el proyecto de venta de productos, adquirí conocimientos sobre la implementación de sistemas de compra en línea, gestión de carritos de compra, confirmación de pedidos y seguimiento del estado de las transacciones.",
+
+  "section2-item8-h2": "TASKS",
+  "section2-item8-p": "Repositorio",
+
+  "section2-item9-h2": "GALLERY",
+  "section2-item9-p": "Repositorio",
+
+  "form-label-1": "Correo electrónico",
+  "form-label-2": "Mensaje",
+  "btn-submit": "Enviar"
+
+}
