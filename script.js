@@ -183,4 +183,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    i18next.init({
+        lng: 'es',
+        resources: {
+            en: {
+                translation: {}
+            },
+            es: {
+                translation: {}
+            }
+        }
+    }, function(err, t) {
+        // Carga de traducciones desde archivos JSON
+        loadLocales().then(() => {
+            updateContent();
+
+            document.getElementById('toggleButton').addEventListener('click', function() {
+                const currentLanguage = i18next.language === 'es' ? 'en' : 'es';
+                i18next.changeLanguage(currentLanguage, updateContent);
+            });
+        });
+    });
+
+    function loadLocales() {
+        return Promise.all([
+            fetchLocale('en'),
+            fetchLocale('es')
+        ]);
+    }
+
+    function fetchLocale(language) {
+        return fetch(`locales/${language}.json`)
+            .then(response => response.json())
+            .then(json => {
+                i18next.addResourceBundle(language, 'translation', json, true, true);
+            });
+    }
+
+    function updateContent() {
+        // Traducción de los enlaces utilizando data-i18n
+        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+        
+        // Iterar sobre los elementos y actualizar su texto
+        elementsToTranslate.forEach(element => {
+            const translationKey = element.getAttribute('data-i18n');
+            element.textContent = i18next.t(translationKey);
+        });
+    
+        // Actualizar la imagen del botón de cambio de idioma
+        const changeLanguageBtn = document.getElementById('toggleButton');
+        if (changeLanguageBtn) {
+            const currentLanguage = i18next.language;
+            const languageImage = currentLanguage === 'es' ? 'assets/img/english.png' : 'assets/img/spanish.png';
+            changeLanguageBtn.querySelector('img').setAttribute('src', languageImage);
+        }
+    }
+    
+    
 });
