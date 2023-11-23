@@ -21,26 +21,32 @@ body {
     flex-direction: column;
     user-select: none;
     transition: opacity 1.5s ease-in-out;
-    /* background-color: rgba(0, 0, 0, 0.3); */
+    box-sizing: border-box;
+    align-items: center;
 }
 
-#contact-links {
+#row {
+    display: flex;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+#contact, #change-language {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap; 
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 8px;
 }
 
-#contact-links img {
-    height: 40px;
-    width: 40px;
-    padding: 15px;
+#contact img, #change-language img {
+    height: 35px;
+    width: 35px;
+    margin: 10px;
     transform: scale(1); 
 }
 
-#contact-links img:hover { transform: scale(1.2); }
+#contact img:hover, #change-language img:hover { transform: scale(1.2); }
 
 /* Clases para ocultar elementos y demás animaciones*/
 
@@ -52,9 +58,8 @@ body {
 
 #nav {
     padding: 0;
-    margin: 0;
-    width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    width: 60%;
     display: flex;
     justify-content: center;
 }
@@ -106,7 +111,7 @@ body {
 section {
     display: none;
     width: 60%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transform: scale(1);
     border-radius: 10px; 
     font-family: 'Raleway', sans-serif;
@@ -122,19 +127,28 @@ section {
 
 section h2 {
     text-align: center; 
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 22px; 
+    margin-top: 55px;
+    margin-bottom: 35px;
+    font-size: 21px; 
     color: rgba(113, 169, 241, 0.9);
 }
 
 section h2:hover { animation: rotate 0.4s ease-in-out forwards; } 
 
-section p, section ul li {
-    font-size: 15.5px; 
+section h3.p-title {
+    color: rgba(113, 169, 241, 0.9);
+    font-size: 16px; 
     line-height: 2; 
-    width: 85%;
-    margin: 30px auto;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+section p {
+    font-size: 15px; 
+    line-height: 2; 
+    width: 80%;
+    margin: 18px auto;
 }
 
 #section1-img-container {
@@ -144,7 +158,7 @@ section p, section ul li {
     flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
-    margin: 35px auto;
+    margin: 40px auto;
 }
 
 #section1-img-container .my-photo {
@@ -165,8 +179,9 @@ section p, section ul li {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 40px;
 }
+
 #section1 .download img {
     height: 35px;
     width: 35px;
@@ -199,14 +214,14 @@ section p, section ul li {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
-    margin: 0 100px;
 }
-
+  
 .section2-subsection .technologies-img-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
-    margin-bottom: 25px;
+    margin-top: 0;
+    margin-bottom: 40px;
 }
 
 .section2-subsection .repository-link {
@@ -214,6 +229,7 @@ section p, section ul li {
     flex-wrap: wrap; 
     flex-direction: column;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .section2-subsection .repository-link .repository {
@@ -231,14 +247,13 @@ section p, section ul li {
     margin-bottom: 25px;
 }
 
-.li-title { color: rgba(113, 169, 241, 0.9); }
-
-.section2-subsection .repository-link .repository img{
-    height: 45px;
-    width: 45px;
+.section2-subsection .repository-link .repository img {
+    height: 40px;
+    width: 40px;
     margin-right: 15px;
     padding: 18px;
 }
+
 #section1 .technologies-img-container img,
 .section2-subsection .technologies-img-container img { 
     height: 45px;
@@ -258,14 +273,15 @@ section p, section ul li {
 
 #section2 .section2-buttons {
     display: flex;
-    justify-content: space-evenly;
-    margin: 25px;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 80%;
 }
 
 #section2 #next-item-btn, 
 #section2 #prev-item-btn {
     font-family: 'Raleway', sans-serif;
-    font-size: 20px; 
+    font-size: 19px; 
     font-weight: bold; 
     text-decoration: none; 
     cursor: pointer;
@@ -279,7 +295,10 @@ section p, section ul li {
     animation: tilt 0.25s ease infinite alternate; 
 }
 
-#main #section3 { width: 30%; }
+#main #section3 { 
+    width: 30%; 
+    margin-top: 50px;
+}
 
 #main #section3 form {
     display: flex;
@@ -321,6 +340,11 @@ section p, section ul li {
 
 @media only screen and (max-width: 768px) {
 
+    #nav { 
+        margin-top: 15px; 
+        margin-bottom: 28px ;
+    }
+
     #main #section1,
     #main #section2,
     #main #section3 {
@@ -328,11 +352,14 @@ section p, section ul li {
         padding: 30px; 
     }
 
-    #main section h2 {
-        margin-top: 30px;
+    #main section h2 { 
+        margin-top: 35px;
         margin-bottom: 30px;
-        font-size: 22px; 
-        color: rgba(113, 169, 241, 0.9);
+    }
+
+    #section1 .download {
+        margin-top: 35px;
+        margin-bottom: 20px;
     }
     
     #main section h2:hover,
@@ -356,7 +383,7 @@ section p, section ul li {
         margin: 0 auto;
     }
 
-    #contact-links img,
+    #contact img,
     #section1 .technologies-img-container img,
     .section2-subsection .technologies-img-container img {
         width: 40px;
@@ -370,6 +397,13 @@ section p, section ul li {
         padding: 25px;
     }
 
+    #section2 .section2-buttons {
+        margin: 30px auto;
+        width: 80%;
+    }  
+
+    #main #section3 { margin-top: 8px; }
+
     #main #section3 form label {  margin: 10px 0; }
 
     #main #section3 form input,
@@ -381,7 +415,7 @@ section p, section ul li {
 
     #main #section2 .technologies-img-container { margin-bottom: 30px; }
 
-    .section2-subsection .repository-link  { margin: 20px auto; }
+    .section2-subsection .repository-link  { margin-top: 30px; }
 
 }
 
