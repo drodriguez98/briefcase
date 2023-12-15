@@ -1,10 +1,7 @@
 {
-
   "nav-a1": "PRESENTATION",
   "nav-a2": "PROJECTS",
-
   "toogle-button": "Change language",
-
   "section1-h3-1": "Professional Profile",
   "section1-p1": "Developer with experience in a wide range of technologies, from managing databases like MySQL, MariaDB, and Oracle (procedures, events, and triggers in PL/SQL) to using languages such as Python, PHP, and Java (Spring Boot). In the front-end field, I have experience with HTML5, CSS3, JavaScript, and the Angular framework.",
   "section1-p2": "Actually my education includes a degree in Early Childhood Education, a Higher Degree Cycle in Network Systems Administration, and a Programming Bootcamp. Nevertheless, I am committed to continuous learning and stand out for my self-taught approach and quick adaptation to new technologies.",
@@ -13,10 +10,8 @@
   "section1-p4": "My experience also includes handling XML, DTD/XSD, XPath, XQuery, and XSLT for XML file manipulation and validation, as well as integrating content from other sources via Atom/RSS. In networking, I have skills in configuring routers, switches (CISCO), subnetting, VLAN management, and handling services like DNS, DHCP, HTTP, FTP, email, and NAS. I also possess skills in cybersecurity, including virtualization (LVM, LXC), encryption, and cryptography (HTTPS certificates).",
   "section1-h3-3": "Professional Objective",
   "section1-p5": "I am currently seeking job opportunities that allow me to apply my skills as a developer or systems administrator. I am committed to providing innovative solutions and contributing to the success of technological projects.",
-
   "prev-item-btn": "Back",
   "next-item-btn": "Next",
-
   "section2-item1-h2": "SPRING BOOT & ANGULAR",
   "section2-item1-p1": "As a developer, I've worked with Spring Boot and Angular to create efficient, high-quality applications, allowing me to acquire specific and valuable skills:",
   "section2-item1-p2-title": "Spring Boot",
@@ -24,14 +19,12 @@
   "section2-item1-p4": "My expertise covers implementing RESTful APIs, integrating databases, and efficiently managing business logic, implementing security with Spring Security to protect resources and manage user authentication and authorization.",
   "section2-item1-p5-title": "Angular / Thymeleaf",
   "section2-item1-p6": "Using Angular or Thymeleaf in the frontend has provided opportunities to create dynamic and responsive interfaces. With Angular, I've been able to reuse components and leverage tools like Angular Material and ngx-charts to dynamically, effectively, and attractively display data for users, while Thymeleaf has allowed me to quickly and effectively generate templates for the frontend.",
-
-  "section2-item2-h2": "APPMAZING",
-  "section2-item2-p1": "Backend Repository",
-  "section2-item2-p2": "Frontend Repository",
-
-  "section2-item3-h2": "FUNDME",
-  "section2-item3-p": "Repository",
-
+  "section2-item2-h2": "FUNDME",
+  "section2-item2-p1": "Repository (Backend)",
+  "section2-item2-p2": "Repository (Frontend)",
+  "section2-item3-h2": "APPMAZING",
+  "section2-item3-p1": "Backend Repository",
+  "section2-item3-p2": "Frontend Repository",
   "section2-item4-h2": "PYTHON",
   "section2-item4-p1": "The following projects share certain common elements in their structure and functionality, as they are all developed using the Python Pygame library. They have allowed me to develop the following techniques.",
   "section2-item4-p2-title": "Graphics Manipulation",
@@ -42,13 +35,10 @@
   "section2-item4-p7": "Pygame is used to play sounds and music when the player performs specific actions, such as matching a correct pattern or losing the game.",
   "section2-item4-p8-title": "Time Control",
   "section2-item4-p9": "The time module allows managing time, controlling animation speed, and setting time limits for certain actions, such as the time before considering the player to have lost.",
-  
   "section2-item5-h2": "SNAKE",
   "section2-item5-p": "Repository",
-
   "section2-item6-h2": "SPACESHIP",
   "section2-item6-p": "Repository",
-
   "section2-item7-h2": "PHP & MySQL",
   "section2-item7-p1": "The following projects are developed with PHP and MySQL. Below, I summarize some key insights gained during their development.",
   "section2-item7-p2-title": "User Interface with Bootstrap",
@@ -57,15 +47,11 @@
   "section2-item7-p5": "I have learned how to implement user authentication systems, as well as allow users to perform actions such as adding, editing and deleting elements in a database.",
   "section2-item7-p6-title": "Transaction Processing",
   "section2-item7-p7": "In the product sales project, I gained knowledge in implementing online purchase systems, managing shopping carts, order confirmation, and tracking transaction statuses.",
-
   "section2-item8-h2": "TASKS",
   "section2-item8-p": "Repository",
-
   "section2-item9-h2": "GALLERY",
   "section2-item9-p": "Repository",
-
   "form-label-1": "Email",
   "form-label-2": "Message",
   "btn-submit": "Send"
-
 }

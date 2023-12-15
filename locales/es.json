@@ -1,10 +1,7 @@
 {
-  
   "nav-a1": "PRESENTACIÓN",
   "nav-a2": "PROYECTOS",
-
   "toogle-button": "Cambiar idioma",
-
   "section1-h3-1": "Perfil profesional",
   "section1-p1": "Desarrollador con experiencia en una amplia gama de tecnologías, desde el manejo  de bases de datos como MySQL, MariaDB y Oracle (procedimientos, eventos y triggers en PL/SQL), hasta el uso de lenguajes como Python, PHP, y Java (Spring Boot). En el ámbito del front-end, tengo experiencia con HTML5, CSS3, JavaScript y el framework Angular.",
   "section1-p2": "A día de hoy, mi formación incluye un Grado de Educación Infantil, un Ciclo de Grado Superior en Administración de Sistemas en Red y un Bootcamp de Programación. Aún así, estoy comprometido con el aprendizaje continuo y me destaco por mi enfoque autodidacta y la rápida adaptación a nuevas tecnologías.",
@@ -13,10 +10,8 @@
   "section1-p4": "Mi experiencia incluye también el manejo de XML, DTD/XSD, XPath, XQuery y XSLT para la manipulación y validación de archivos XML, así como la integración de contenido de otras fuentes a través de Atom/RSS. En el ámbito de redes, cuento con habilidades en configuración de routers, switches (CISCO), subnetting, VLAN y gestión de servicios como DNS, DHCP, HTTP, FTP, email y NAS. También poseo habilidades en seguridad informática, incluyendo virtualización (LVM, LXC), cifrado y criptografía (certificados HTTPS).",
   "section1-h3-3": "Objetivo profesional",
   "section1-p5": "Actualmente busco oportunidades laborales que me permitan aplicar mis habilidades como desarrollador o administrador de sistemas. Estoy comprometido en aportar soluciones innovadoras y contribuir al éxito de proyectos tecnológicos.",
-
   "prev-item-btn": "Retroceder",
-  "next-item-btn": "Avanzar", 
-
+  "next-item-btn": "Avanzar",
   "section2-item1-h2": "SPRING BOOT & ANGULAR",
   "section2-item1-p1": "Como desarrollador he trabajado con Spring Boot y Angular para crear aplicaciones eficientes y de alta calidad, lo que me ha permitido adquirir habilidades específicas y valiosas:",
   "section2-item1-p2-title": "Spring Boot",
@@ -24,14 +19,12 @@
   "section2-item1-p4": "Mi experiencia abarca la implementación de APIs RESTful, la integración de bases de datos, y la gestión de la lógica del negocio de manera eficiente, implementando seguridad con Spring Security para proteger recursos y gestionar la autenticación y autorización de usuarios.",
   "section2-item1-p5-title": "Angular / Thymeleaf",
   "section2-item1-p6": "El uso de Angular o Thymeleaf en el frontend ha proporcionado oportunidades para crear interfaces dinámicas y responsivas. Con Angular, he podido reutilizar componentes y aprovechar herramientas como Angular Material y ngx-charts para mostrar datos de manera dinámica, efectiva y atractiva para los usuarios, mientras que Thymeleaf me ha permitido generar plantillas de forma rápida y efectiva para el frontend.",
-
-  "section2-item2-h2": "APPMAZING",
+  "section2-item2-h2": "FUNDME",
   "section2-item2-p1": "Repositorio (Backend)",
   "section2-item2-p2": "Repositorio (Frontend)",
-
-  "section2-item3-h2": "FUNDME",
-  "section2-item3-p": "Repositorio",
-
+  "section2-item3-h2": "APPMAZING",
+  "section2-item3-p1": "Repositorio (Backend)",
+  "section2-item3-p2": "Repositorio (Frontend)",
   "section2-item4-h2": "PYTHON",
   "section2-item4-p1": "Los siguientes proyectos comparten ciertos elementos comunes en su estructura y funcionalidad, ya que todos están desarrollados con la biblioteca Pygame de Python y me han permitido desarrollar las siguientes  técnicas.",
   "section2-item4-p2-title": "Manipulación de gráficos.",
@@ -42,14 +35,10 @@
   "section2-item4-p7": "Pygame se utiliza para reproducir sonidos y música cuando el jugador realiza acciones específicas, como coincidir con un patrón correcto o perder el juego.",
   "section2-item4-p8-title": "Control de tiempo.",
   "section2-item4-p9": "El módulo de tiempo permite gestionar el tiempo, controlar la velocidad de las animaciones y establecer límites de tiempo para ciertas acciones, como el tiempo antes de que se considere que el jugador ha perdido.",
-
-
   "section2-item5-h2": "SNAKE",
   "section2-item5-p": "Repositorio",
-
   "section2-item6-h2": "SPACESHIP",
   "section2-item6-p": "Repositorio",
-
   "section2-item7-h2": "PHP & MySQL",
   "section2-item7-p1": "Los siguientes proyectos están desarrollados con PHP y MySQL. A continuación, resumo algunos conocimientos clave adquiridos durante su desarrollo.",
   "section2-item7-p2-title": "Interfaz de usuario con Bootstrap.",
@@ -58,15 +47,11 @@
   "section2-item7-p5": "He aprendido a implementar sistemas de autenticación de usuarios, así como a permitirles realizar acciones como agregar, editar y eliminar elementos en una base de datos.",
   "section2-item7-p6-title": "Procesamiento de transacciones.",
   "section2-item7-p7": " En el proyecto de venta de productos, adquirí conocimientos sobre la implementación de sistemas de compra en línea, gestión de carritos de compra, confirmación de pedidos y seguimiento del estado de las transacciones.",
-
   "section2-item8-h2": "TASKS",
   "section2-item8-p": "Repositorio",
-
   "section2-item9-h2": "GALLERY",
   "section2-item9-p": "Repositorio",
-
   "form-label-1": "Correo electrónico",
   "form-label-2": "Mensaje",
   "btn-submit": "Enviar"
-
 }
